@@ -1,15 +1,31 @@
-import { Col, Flex, Row } from "antd";
+import { Button, Col, Flex, Row } from "antd";
 import reelpayAuthBg from "../../assets/images/img/reelpayauthbg.png";
+import reelpayLogo from "../../assets/images/svg/reelpaylogo.svg";
+import AuthHeading from "../../components/AuthHeading";
 
 const Authpage = () => {
   return (
     <Row className="h-screen min-h-screen border border-amber-900">
       <Col xs={24} lg={16}>
-        <div className="h-screen">
-          <div>lkll</div>
-          <Flex justify="center" align="center" className="border">
-            <div className="border border-amber-600 w-95 max-w-95">hjhjh</div>
+        <div className="h-screen py-5 px-4 md:px-10">
+          <Flex align="center" justify="space-between">
+            <div>
+              <img src={reelpayLogo} className="object-fit w-38" />
+            </div>
+            <Flex align="center">
+              <p className="hidden md:block text-sm text-brandAsh">Already have an account?</p>
+              <Button type="link" className="!p-1 !text-brandPink">
+                Log in
+              </Button>
+            </Flex>
           </Flex>
+         <div className="mt-16 md:mt-36">
+           <Flex justify="center" align="center">
+            <div className="w-96 max-w-96">
+              <AuthHeading heading={'Create an account'} title={'Gain access to a growing network of over 300+ creators and 20+ brands.'}/>
+            </div>
+          </Flex>
+         </div>
         </div>
       </Col>
       <Col

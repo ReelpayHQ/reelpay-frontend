@@ -1,47 +1,48 @@
-@import "tailwindcss";
+   @import "tailwindcss";
 
-@theme {
-  --font-inter: "Inter", sans-serif;
-  --color-brandPink: #FA18D0;
-  --color-brandPinkDisabled: rgba(250, 24, 208, 0.4);
-  --color-brandBlack: #12100C;
-  --color-brandAsh: #645E63;
-  --color-brandAsh-100: #CED8E3;
-  --color-brandAsh-200: #686868;
-}
+   @theme {
+     --font-inter: "Inter", sans-serif;
+     --color-brandPink: #FA18D0;
+     --color-brandPinkDisabled: rgba(250, 24, 208, 0.4);
+     --color-brandBlack: #12100C;
+     --color-brandAsh: #645E63;
+     --color-brandAsh-100: #CED8E3;
+     --color-brandAsh-200: #686868;
+     --text-size32: 32px;
+   }
 
-#root {
-  margin: 0;
-  padding: 0;
-}
+   #root {
+     margin: 0;
+     padding: 0;
+   }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
+   .logo {
+     height: 6em;
+     padding: 1.5em;
+     will-change: filter;
+     transition: filter 300ms;
+   }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+   .logo:hover {
+     filter: drop-shadow(0 0 2em #646cffaa);
+   }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+   .logo.react:hover {
+     filter: drop-shadow(0 0 2em #61dafbaa);
+   }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+   @keyframes logo-spin {
+     from {
+       transform: rotate(0deg);
+     }
 
-  to {
-    transform: rotate(360deg);
-  }
-}
+     to {
+       transform: rotate(360deg);
+     }
+   }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+   @media (prefers-reduced-motion: no-preference) {
+     a:nth-of-type(2) .logo {
+       animation: logo-spin infinite 20s linear;
+     }
+   }
