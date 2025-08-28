@@ -7,17 +7,18 @@ import Google from "../../../assets/images/svg/google.svg";
 
 const AuthWrapper = () => {
   const isSignup = true;
-  const isCreator = "creator";
+  const user = "creator";
+  const isCreator = user === "creator";
   return (
     <Row className="h-screen min-h-screen">
       <Col xs={24} lg={16}>
-        <div className="h-screen py-5 px-4 md:px-10 border-2">
+        <div className="h-screen py-5 px-4 md:px-10">
           <Flex align="center" justify="space-between">
             <div>
               <img src={reelpayLogo} className="object-fit w-38" />
             </div>
             <Flex align="center">
-              <div className="w-14 h-7">
+              <div className="w-15 h-7">
                 <Button
                   type="primary"
                   block={true}
@@ -28,49 +29,52 @@ const AuthWrapper = () => {
               </div>
             </Flex>
           </Flex>
-          <div className="mt-16 md:mt-32 h-8/10">
-            <Flex justify="center" align="center">
-              <div className="w-96 max-w-96 flex flex-col justify-between">
-                <div>
-                  <AuthHeading
-                    heading={!isSignup ? "Welcome back" : "Sign up"}
-                    ctaText={
-                      !isSignup ? "" : isCreator ? "as a Creator" : "as a Brand"
-                    }
-                    title={
-                      !isSignup
-                        ? "Log in to your account to manage your campaigns"
-                        : isCreator
-                        ? "Gain access to a network of over 30+ Brands."
-                        : "Gain access to a network of over 300+ creators."
-                    }
-                  />
-                  <Flex className="flex-col gap-2 !mt-8">
-                    <Outlet context={{ isCreator }} />
-                  </Flex>
-                  <div>
-                    <Flex align="center">
-                      <div className="w-5/10">
-                        <Divider className="bg-brandAsh-300" />
-                      </div>
-                      <p className="px-3 text-brandAsh-500">or</p>
-                      <div className="w-5/10">
-                        <Divider className="bg-brandAsh-300" />
-                      </div>
-                      <div />
-                    </Flex>
-
-                    <Button
-                      block={true}
-                      className="!bg-brandAsh-600 !text-brandBlack !border !border-brandAsh-600"
-                    >
-                      <img src={Google} className="object-fit" />
-                      Continue with Google
-                    </Button>
+          <div className="mt-16 md:mt-20 flex flex-col justify-between w-full md:w-96 max-w-96 m-auto h-8/10">
+            <div>
+              <AuthHeading
+                heading={isSignup ? "Sign up" : "Welcome back"}
+                ctaText={
+                  isSignup ? (isCreator ? "as a Creator" : "as a Brand") : ""
+                }
+                title={
+                  isSignup
+                    ? isCreator
+                      ? "Gain access to a network of over 30+ Brands."
+                      : "Gain access to a network of over 300+ creators."
+                    : "Log in to your account to manage your campaigns"
+                }
+              />
+              <Flex className="flex-col gap-2 !mt-8">
+                <Outlet context={{ isCreator }} />
+              </Flex>
+              <div>
+                <Flex align="center">
+                  <div className="w-5/10">
+                    <Divider className="bg-brandAsh-300" />
                   </div>
-                </div>
+                  <p className="px-3 text-brandAsh-500">or</p>
+                  <div className="w-5/10">
+                    <Divider className="bg-brandAsh-300" />
+                  </div>
+                  <div />
+                </Flex>
+                <Button
+                  block={true}
+                  className="!bg-brandAsh-600 !text-brandBlack !border !border-brandAsh-600"
+                >
+                  <img src={Google} className="object-fit" />
+                  Continue with Google
+                </Button>
               </div>
-            </Flex>
+            </div>
+            <div className="text-center py-2 md:p-0">
+              <p className="text-size13 capitalize text-brandAsh mt-4 md:mt-0">
+                Are you a {isCreator}?{" "}
+                <span className="text-brandPink">
+                  {isSignup ? "Sign up" : "Log in"} here
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </Col>
@@ -93,11 +97,3 @@ const AuthWrapper = () => {
 };
 
 export default AuthWrapper;
-//  <div className="text-center">
-//                   <p className="text-size13 capitalize text-brandAsh mt-4 md:mt-0">
-//                     Are you a {isCreator}?{" "}
-//                     <span className="text-brandPink">
-//                       {!isSignup ? "Log in" : "Sign up"}here
-//                     </span>
-//                   </p>
-//                 </div>

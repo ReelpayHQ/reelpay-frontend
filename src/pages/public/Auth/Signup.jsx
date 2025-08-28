@@ -8,7 +8,6 @@ const AgreementText = ({ text }) => {
 };
 const Signup = () => {
   const contextValue = useOutletContext();
-  const isCreator = contextValue?.isCreator === "creator";
   return (
     <>
       <CustomInputField label={"Business email"} />
@@ -24,7 +23,7 @@ const Signup = () => {
         </p>
       </Checkbox>
       <Button type="primary" className="!mt-8">
-        Continue as {isCreator ? "Creator" : "Brand"}
+        Continue as {contextValue?.isCreator ? "Creator" : "Brand"}
       </Button>
     </>
   );
