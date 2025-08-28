@@ -13,19 +13,26 @@ const Authpage = () => {
               <img src={reelpayLogo} className="object-fit w-38" />
             </div>
             <Flex align="center">
-              <p className="hidden md:block text-sm text-brandAsh">Already have an account?</p>
+              <p className="hidden md:block text-sm text-brandAsh">
+                Already have an account?
+              </p>
               <Button type="link" className="!p-1 !text-brandPink">
                 Log in
               </Button>
             </Flex>
           </Flex>
-         <div className="mt-16 md:mt-36">
-           <Flex justify="center" align="center">
-            <div className="w-96 max-w-96">
-              <AuthHeading heading={'Create an account'} title={'Gain access to a growing network of over 300+ creators and 20+ brands.'}/>
-            </div>
-          </Flex>
-         </div>
+          <div className="mt-16 md:mt-36">
+            <Flex justify="center" align="center">
+              <div className="w-96 max-w-96">
+                <AuthHeading
+                  heading={"Create an account"}
+                  title={
+                    "Gain access to a growing network of over 300+ creators and 20+ brands."
+                  }
+                />
+              </div>
+            </Flex>
+          </div>
         </div>
       </Col>
       <Col

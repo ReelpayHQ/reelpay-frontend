@@ -8,7 +8,14 @@
      --color-brandAsh: #645E63;
      --color-brandAsh-100: #CED8E3;
      --color-brandAsh-200: #686868;
+     --color-brandAsh-300: #F3F1F3;
+     --color-brandAsh-400: #CECACD;
+     --color-brandAsh-500: #9C969B;
+     --color-brandAsh-600: #F6F4F6;
+     --color-brandRed: #F43F5E;
+     --text-size13: 13px;
      --text-size32: 32px;
+
    }
 
    #root {
