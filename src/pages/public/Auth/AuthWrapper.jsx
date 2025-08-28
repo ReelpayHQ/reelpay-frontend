@@ -1,9 +1,9 @@
 import { Button, Col, Divider, Flex, Row } from "antd";
 import { Outlet } from "react-router";
 import reelpayAuthBg from "../../../assets/images/img/reelpayauthbg.png";
-import reelpayLogo from "../../../assets/images/svg/reelpaylogo.svg";
 import AuthHeading from "../../../components/AuthHeading";
 import Google from "../../../assets/images/svg/google.svg";
+import CustomLogo from "../../../components/CustomLogo";
 
 const AuthWrapper = () => {
   const isSignup = true;
@@ -12,11 +12,9 @@ const AuthWrapper = () => {
   return (
     <Row className="h-screen min-h-screen">
       <Col xs={24} lg={16}>
-        <div className="h-screen py-5 px-4 md:px-10">
+        <div className="h-screen flex flex-col py-5 px-4 md:px-10">
           <Flex align="center" justify="space-between">
-            <div>
-              <img src={reelpayLogo} className="object-fit w-38" />
-            </div>
+            <CustomLogo />
             <Flex align="center">
               <div className="w-15 h-7">
                 <Button
@@ -29,7 +27,7 @@ const AuthWrapper = () => {
               </div>
             </Flex>
           </Flex>
-          <div className="mt-16 md:mt-20 flex flex-col justify-between w-full md:w-96 max-w-96 m-auto h-8/10">
+          <div className="mt-16 md:mt-20 flex flex-1 flex-col justify-between w-full md:w-96 max-w-96 m-auto">
             <div>
               <AuthHeading
                 heading={isSignup ? "Sign up" : "Welcome back"}

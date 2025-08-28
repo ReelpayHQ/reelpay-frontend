@@ -1,4 +1,3 @@
-import React from "react";
 import CustomInputField from "../../../components/fields/CustomInputField";
 import { Button, Checkbox, Flex } from "antd";
 import { useOutletContext } from "react-router";
