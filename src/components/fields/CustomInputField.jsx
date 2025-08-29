@@ -1,6 +1,7 @@
 import { Input } from "antd";
 import React from "react";
 import ErrorText from "../ErrorText";
+import CustomLabel from "./CustomLabel";
 
 const { Password, TextArea, OTP, Search } = Input;
 const CustomInputField = ({
@@ -21,11 +22,7 @@ const CustomInputField = ({
       : Input;
   return (
     <div>
-      {label ? (
-        <label className="font-medium text-sm text-brandAsh" {...labelProps}>
-          {label}
-        </label>
-      ) : null}
+      {label ? <CustomLabel label={label} {...labelProps} /> : null}
       <div className="mt-1">
         <InputComponent status={error ? "error" : status} {...props} />
       </div>

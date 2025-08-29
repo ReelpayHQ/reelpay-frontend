@@ -12,12 +12,29 @@
      --color-brandAsh-400: #CECACD;
      --color-brandAsh-500: #9C969B;
      --color-brandAsh-600: #F6F4F6;
+     --color-brandAsh-700: #7D8191;
+     --color-brandAsh-800: #EFECEF;
      --color-brandRed: #F43F5E;
+     --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
      --text-size13: 13px;
      --text-size32: 32px;
+     --shadow-sm: 0px 2px 4px 0px hsla(240, 9%, 46%, 0.12), 0px 0px 8px 0px hsla(240, 9%, 46%, 0.07), 0px 32px 13px 0px hsla(240, 9%, 46%, 0.01);
+
+     @keyframes scrollLoop {
+       from {
+         transform: translateY(0);
+       }
+
+       to {
+         transform: translateY(-50%);
+       }
+     }
+
+     --animate-scrollLoop: scrollLoop 60s linear infinite;
 
    }
+
 
    #root {
      margin: 0;
