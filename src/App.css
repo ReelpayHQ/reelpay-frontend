@@ -21,7 +21,7 @@
      --text-size32: 32px;
      --shadow-sm: 0px 2px 4px 0px hsla(240, 9%, 46%, 0.12), 0px 0px 8px 0px hsla(240, 9%, 46%, 0.07), 0px 32px 13px 0px hsla(240, 9%, 46%, 0.01);
 
-     @keyframes scrollLoop {
+     /* @keyframes scrollLoop {
        from {
          transform: translateY(0);
        }
@@ -31,8 +31,20 @@
        }
      }
 
-     --animate-scrollLoop: scrollLoop 60s linear infinite;
+     --animate-scrollLoop: scrollLoop 60s linear infinite; */
 
+
+     @keyframes scrollVertical {
+       0% {
+         transform: translateY(0);
+       }
+
+       100% {
+         transform: translateY(-100vh);
+       }
+     }
+
+     --animate-scrollLoop: scrollVertical 60s linear infinite;
    }
 
 
@@ -71,3 +83,16 @@
        animation: logo-spin infinite 20s linear;
      }
    }
+
+   /* @keyframes scrollVertical {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-100vh);
+            }
+          }
+          
+          .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+          } */
