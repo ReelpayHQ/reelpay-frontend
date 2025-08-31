@@ -1,14 +1,17 @@
 import { Button, Col, Divider, Flex, Row } from "antd";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import reelpayAuthBg from "../../../assets/images/img/reelpayauthbg.png";
 import AuthHeading from "../../../components/AuthHeading";
 import Google from "../../../assets/images/svg/google.svg";
 import CustomLogo from "../../../components/CustomLogo";
 
 const AuthWrapper = () => {
-  const isSignup = true;
   const user = "creator";
   const isCreator = user === "creator";
+
+  const location = useLocation();
+
+  const isSignup = location?.pathname?.includes("signup");
   return (
     <Row className="h-screen min-h-screen">
       <Col xs={24} lg={16}>
