@@ -6,7 +6,7 @@ import CustomInputField from "../../../components/fields/CustomInputField";
 import CustomSelect from "../../../components/fields/CustomSelect";
 import { Formik } from "formik";
 import { object, string, mixed } from "yup";
-import OnboardingForms from "./onboardingForms";
+import OnboardingForms from "./OnboardingForms";
 import { fileSizeValidation } from "../../../utils/fileSizeValidation";
 import {
   countriesOptions,
