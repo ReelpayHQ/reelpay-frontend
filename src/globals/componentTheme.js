@@ -1,5 +1,10 @@
+import { Checkbox } from "antd";
+
 export const componentTheme = {
-  token: {},
+  token: {
+    borderRadius: 8,
+    // controlHeight: 44,
+  },
   components: {
     Button: {
       defaultBorderColor: "var(--color-brandAsh-100)",
@@ -15,9 +20,34 @@ export const componentTheme = {
       colorTextDisabled: "",
       borderColorDisabled: "",
       colorPrimaryActive: "",
-      borderRadius: 8,
-      fontWeight: 600,
+      fontWeight: 500,
+      contentFontSize: "14px",
       colorPrimaryHover: "",
+      controlHeight: 44,
+    },
+    Input: {
+      activeBorderColor: "var(--color-brandPink)",
+      hoverBorderColor: "var(--color-brandPink)",
+      colorBorder: "var(--color-brandAsh-400)",
+      controlHeight: 40,
+      colorIcon: "var(--color-brandAsh)",
+      colorError: "var(--color-brandRed)",
+    },
+    Select: {
+      activeBorderColor: "var(--color-brandPink)",
+      hoverBorderColor: "var(--color-brandPink)",
+      colorBorder: "var(--color-brandAsh-400)",
+      controlHeight: 44,
+      colorIcon: "var(--color-brandAsh)",
+      colorError: "var(--color-brandRed)",
+      optionSelectedBg: "var(--color-brandPink)",
+      colorTextPlaceholder: "var(--color-brandAsh-400)",
+    },
+    Checkbox: {
+      colorPrimaryHover: "",
+      colorPrimaryBorder: "var(--color-brandAsh)",
+      colorPrimary: "var(--color-brandBlack)",
+      borderRadiusSM: 2,
     },
   },
 };
