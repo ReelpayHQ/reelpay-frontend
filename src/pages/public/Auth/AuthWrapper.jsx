@@ -1,5 +1,5 @@
 import { Button, Col, Divider, Flex, Row } from "antd";
-import { Outlet, useLocation } from "react-router";
+import { Outlet, useLocation, useNavigate } from "react-router";
 import reelpayAuthBg from "../../../assets/images/img/reelpayauthbg.png";
 import AuthHeading from "../../../components/AuthHeading";
 import Google from "../../../assets/images/svg/google.svg";
@@ -10,6 +10,7 @@ const AuthWrapper = () => {
   const isCreator = user === "creator";
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isSignup = location?.pathname?.includes("signup");
   return (
@@ -24,6 +25,13 @@ const AuthWrapper = () => {
                   type="primary"
                   block={true}
                   className="!bg-brandAsh-300 !text-brandAsh !h-full"
+                  onClick={() => {
+                    if (isSignup) {
+                      navigate("/login");
+                    } else {
+                      navigate("/signup");
+                    }
+                  }}
                 >
                   {isSignup ? "Log in" : "Sign up"}
                 </Button>
