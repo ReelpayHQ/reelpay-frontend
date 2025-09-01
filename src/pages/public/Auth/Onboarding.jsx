@@ -6,7 +6,6 @@ import CustomInputField from "../../../components/fields/CustomInputField";
 import CustomSelect from "../../../components/fields/CustomSelect";
 import { Formik } from "formik";
 import { object, string, mixed } from "yup";
-import OnboardingForms from "./OnboardingForms";
 import { fileSizeValidation } from "../../../utils/fileSizeValidation";
 import {
   countriesOptions,
@@ -17,6 +16,7 @@ import { useState } from "react";
 import imgsrc from "../../../assets/images/img/bg-test.jpg";
 import ReactCrop from "react-image-crop";
 import Cropper from "react-easy-crop";
+import OnboardingForms from "./OnboardingForms";
 
 const initialValue = {
   file: null,
