@@ -162,6 +162,7 @@ const OnboardingForms = () => {
                   className="!p-1 !text-brandRed-100 !h-0"
                   onClick={(e) => {
                     setFieldValue("file", null);
+                    setImgAfterCrop("");
                   }}
                 >
                   Remove
