@@ -9,7 +9,7 @@ import { useNavigate } from "react-router";
 const Resetpassword = () => {
   const showEmailSent = false;
   const showResetField = false;
-  const done = true;
+  const done = !true;
   const navigate = useNavigate();
   return (
     <div className="h-screen py-5 px-7 md:px-10 flex flex-col">

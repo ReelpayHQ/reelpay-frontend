@@ -1,7 +1,7 @@
 import CustomInputField from "../../../components/fields/CustomInputField";
 import { Button, Checkbox, Flex } from "antd";
 import { Formik } from "formik";
-import { useOutletContext } from "react-router";
+import { useNavigate, useOutletContext } from "react-router";
 import { object, string } from "yup";
 
 const initialValue = {
@@ -16,8 +16,11 @@ const AgreementText = ({ text }) => {
 const Signup = () => {
   const contextValue = useOutletContext();
 
+  const navigate  = useNavigate()
+
   const onSignup = (values) => {
     console.log(values);
+    navigate('/onboarding')
   };
 
   const validationSchema = object({

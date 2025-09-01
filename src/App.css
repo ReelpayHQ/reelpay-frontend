@@ -32,7 +32,7 @@
        }
      }
 
-     --animate-scrollLoop: scrollVertical 65s linear infinite;
+     --animate-scrollLoop: scrollVertical 30s linear infinite;
    }
 
 
