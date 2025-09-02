@@ -22,7 +22,7 @@ export const componentTheme = {
       colorPrimaryActive: "",
       fontWeight: 500,
       contentFontSize: "14px",
-      colorPrimaryHover: "",
+      colorPrimaryHover: "var(--color-brandPinkHover)",
       controlHeight: 44,
     },
     Input: {

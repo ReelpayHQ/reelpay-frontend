@@ -1,6 +1,6 @@
 import { Button, Col, Divider, Flex, Row } from "antd";
-import { Outlet, useLocation, useNavigate } from "react-router";
-import reelpayAuthBg from "../../../assets/images/img/reelpayauthbg.png";
+import { Link, Outlet, useLocation, useNavigate } from "react-router";
+import reelpayAuthBg from "../../../assets/images/img/onboardingBgImage.png";
 import AuthHeading from "../../../components/AuthHeading";
 import Google from "../../../assets/images/svg/google.svg";
 import CustomLogo from "../../../components/CustomLogo";
@@ -15,12 +15,12 @@ const AuthWrapper = () => {
   const isSignup = location?.pathname?.includes("signup");
   return (
     <Row className="h-screen min-h-screen">
-      <Col xs={24} lg={16}>
+      <Col xs={24} lg={12}>
         <div className="h-screen flex flex-col py-5 px-4 md:px-10">
           <Flex align="center" justify="space-between">
             <CustomLogo />
             <Flex align="center">
-              <div className="w-15 h-7">
+              <div className={`w-full ${isSignup ? "md:w-60" : "md:w-18"} h-7`}>
                 <Button
                   type="primary"
                   block={true}
@@ -33,7 +33,7 @@ const AuthWrapper = () => {
                     }
                   }}
                 >
-                  {isSignup ? "Log in" : "Sign up"}
+                  {isSignup ? "Already have an account? Log in" : "Sign up"}
                 </Button>
               </div>
             </Flex>
@@ -43,11 +43,11 @@ const AuthWrapper = () => {
               <AuthHeading
                 heading={isSignup ? "Sign up" : "Welcome back"}
                 ctaText={
-                  isSignup ? (isCreator ? "as a Creator" : "as a Brand") : ""
+                  isSignup ? (!isCreator ? "as a Creator" : "as a Brand") : ""
                 }
                 title={
                   isSignup
-                    ? isCreator
+                    ? !isCreator
                       ? "Gain access to a network of over 30+ Brands."
                       : "Gain access to a network of over 300+ creators."
                     : "Log in to your account to manage your campaigns"
@@ -56,32 +56,15 @@ const AuthWrapper = () => {
               <Flex className="flex-col gap-2 !mt-8">
                 <Outlet context={{ isCreator }} />
               </Flex>
-              <div>
-                <Flex align="center">
-                  <div className="w-5/10">
-                    <Divider className="bg-brandAsh-300" />
-                  </div>
-                  <p className="px-3 text-brandAsh-500">or</p>
-                  <div className="w-5/10">
-                    <Divider className="bg-brandAsh-300" />
-                  </div>
-                  <div />
-                </Flex>
-                <Button
-                  block={true}
-                  className="!bg-brandAsh-600 !text-brandBlack !border !border-brandAsh-600"
-                >
-                  <img src={Google} className="object-fit" />
-                  Continue with Google
-                </Button>
-              </div>
             </div>
             <div className="text-center py-2 md:p-0">
               <p className="text-size13 capitalize text-brandAsh mt-4 md:mt-0">
-                Are you a {isCreator}?{" "}
-                <span className="text-brandPink">
-                  {isSignup ? "Sign up" : "Log in"} here
-                </span>
+                Are you a {!isCreator ? "Creator" : "Brand"}?{" "}
+                <Link to={isSignup ? "/login" : "/signup"}>
+                  <span className="text-brandPink">
+                    {isSignup ? "Log in" : "Sign up"} here
+                  </span>
+                </Link>
               </p>
             </div>
           </div>
@@ -90,14 +73,14 @@ const AuthWrapper = () => {
 
       <Col
         xs={0}
-        lg={8}
+        lg={12}
         className="h-screen fixed right-0 top-0 w-full overflow-auto"
       >
         <div
-          className={` h-screen bg-cover bg-no-repeat`}
+          className={`h-screen bg-cover bg-no-repeat`}
           style={{
             backgroundImage: `url(${reelpayAuthBg})`,
-            backgroundPosition: "right center",
+            backgroundPosition: "center center",
           }}
         />
       </Col>

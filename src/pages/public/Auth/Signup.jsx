@@ -3,6 +3,7 @@ import { Button, Checkbox, Flex } from "antd";
 import { Formik } from "formik";
 import { useNavigate, useOutletContext } from "react-router";
 import { object, string } from "yup";
+import GoogleAuthForm from "./GoogleAuthForm";
 
 const initialValue = {
   email: "",
@@ -16,11 +17,11 @@ const AgreementText = ({ text }) => {
 const Signup = () => {
   const contextValue = useOutletContext();
 
-  const navigate  = useNavigate()
+  const navigate = useNavigate();
 
   const onSignup = (values) => {
     console.log(values);
-    navigate('/onboarding')
+    navigate("/onboarding");
   };
 
   const validationSchema = object({
@@ -42,43 +43,48 @@ const Signup = () => {
         {({ values, handleChange, handleSubmit, errors, isSubmitting }) => {
           return (
             <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-              <CustomInputField
-                label={"Business email"}
-                name="email"
-                onChange={handleChange}
-                value={values?.email}
-                error={errors?.email}
-              />
-              <div>
+              <GoogleAuthForm />
+              <div className="flex flex-col gap-3">
                 <CustomInputField
-                  label={"Set password"}
-                  placeholder=""
-                  type={"password"}
-                  name="password"
+                  label={"Business email"}
+                  name="email"
+                  placeholder="johndoe@company.com"
                   onChange={handleChange}
-                  error={errors?.password}
-                  value={values?.password}
+                  value={values?.email}
+                  error={errors?.email}
                 />
-                <Checkbox
-                  className="!mt-2"
-                  name="checked"
-                  onChange={handleChange}
+                <div>
+                  <CustomInputField
+                    label={"Set password"}
+                    placeholder=""
+                    type={"password"}
+                    name="password"
+                    onChange={handleChange}
+                    error={errors?.password}
+                    value={values?.password}
+                  />
+                  <Checkbox
+                    className="!mt-2"
+                    name="checked"
+                    onChange={handleChange}
+                  >
+                    <p className="text-xs text-brandAsh">
+                      You agree to our{" "}
+                      <AgreementText text={"Terms of Service"} /> and{" "}
+                      <AgreementText text={"Privacy Policy."} />
+                    </p>
+                  </Checkbox>
+                </div>
+                <Button
+                  type="primary"
+                  className="!mt-8"
+                  htmlType="submit"
+                  disabled={!values?.checked || isSubmitting}
+                  loading={isSubmitting}
                 >
-                  <p className="text-xs text-brandAsh">
-                    You agree to our <AgreementText text={"Terms of Service"} />{" "}
-                    and <AgreementText text={"Privacy Policy."} />
-                  </p>
-                </Checkbox>
+                  Continue as a {!contextValue?.isCreator ? "Creator" : "Brand"}
+                </Button>
               </div>
-              <Button
-                type="primary"
-                className="!mt-8"
-                htmlType="submit"
-                disabled={!values?.checked || isSubmitting}
-                loading={isSubmitting}
-              >
-                Continue as {contextValue?.isCreator ? "Creator" : "Brand"}
-              </Button>
             </form>
           );
         }}
