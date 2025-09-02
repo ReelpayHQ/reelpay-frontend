@@ -1,4 +1,4 @@
-import { Avatar, Badge, Flex, Table } from "antd";
+import { Avatar, Badge, Dropdown, Flex, Table } from "antd";
 import React from "react";
 import energysupplement from "../../assets/images/img/energysupplement.png";
 import powerup from "../../assets/images/img/powerup.png";
@@ -6,9 +6,76 @@ import vitalityboost from "../../assets/images/img/vitalityboost.png";
 import avatar1 from "../../assets/images/img/avatarman1.png";
 import avatar2 from "../../assets/images/img/avatarman2.png";
 import avatar3 from "../../assets/images/img/avatarwoman1.png";
-import { PiDotsThreeBold } from "react-icons/pi";
+import {
+  PiCopySimpleLight,
+  PiDotsThreeBold,
+  PiLinkSimple,
+  PiLinkSimpleBold,
+  PiPencilSimple,
+  PiTrashBold,
+} from "react-icons/pi";
+import { DropdownIcon } from "../navbar/DashboardNavbar";
 
 const ActiveCampaignTab = () => {
+  const items = [
+    {
+      key: "1",
+      label: (
+        <DropdownIcon
+          Icon={PiPencilSimple}
+          size={16}
+          name="Edit"
+          margin="!mt-0"
+          padding="!px-2 !py-1"
+          iconColor="black"
+          textColor="var(--color-brandBlack)"
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <DropdownIcon
+          Icon={PiLinkSimple}
+          size={16}
+          name="Copy link"
+          margin="!mt-0"
+          padding="!px-2"
+          iconColor="black"
+          textColor="var(--color-brandBlack)"
+        />
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <DropdownIcon
+          Icon={PiCopySimpleLight}
+          size={16}
+          name="Duplicate"
+          margin="!mt-0"
+          padding="!px-2"
+          iconColor="black"
+          textColor="var(--color-brandBlack)"
+        />
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <DropdownIcon
+          Icon={PiTrashBold}
+          size={16}
+          name="Delete"
+          margin="!mt-0"
+          padding="!px-2 !border-t !border-brandAsh-900 !pt-1"
+          iconColor="var(--color-brandRed)"
+          textColor="text-brandRed"
+        />
+      ),
+    },
+  ];
+
   const columns = [
     {
       title: "Brief Name",
@@ -176,9 +243,13 @@ const ActiveCampaignTab = () => {
       title: "",
       dataIndex: "",
       key: "",
-      render:()=>{
-        return <PiDotsThreeBold size={24} color="var(--color-brandAsh-500)"/>
-      }
+      render: () => {
+        return (
+          <Dropdown menu={{ items }} overlayClassName={"w-30 shadow-lg"}>
+            <PiDotsThreeBold size={24} color="var(--color-brandAsh-500)" />
+          </Dropdown>
+        );
+      },
     },
   ];
 

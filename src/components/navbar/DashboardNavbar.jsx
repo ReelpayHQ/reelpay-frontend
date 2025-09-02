@@ -21,21 +21,22 @@ import glovoimg from "../../assets/images/img/glovo.png";
 import paystack from "../../assets/images/img/paystack.png";
 import BrandStatus from "../BrandStatus";
 
-const DropdownIcon = ({
+export const DropdownIcon = ({
   name,
   Icon,
   iconColor = "var(--color-brandBlack)",
   textColor = "text-brandBlack",
   margin = "",
   padding = "!px-4",
+  size=28
 }) => {
   return (
     <Flex
       align="center"
       gap={7}
-      className={`${margin} ${padding} hover:bg-brandAsh-300 !py-2`}
+      className={`${margin} ${padding} hover:bg-brandAsh-300`}
     >
-      <Icon size={28} color={iconColor} />
+      <Icon size={size} color={iconColor} />
       <p className={`text-sm ${textColor}`}>{name}</p>
     </Flex>
   );
@@ -70,7 +71,7 @@ const DashboardNavbar = () => {
             <DropdownIcon
               Icon={PiPlus}
               name="Add new brand"
-              margin="mt-0"
+              margin="mt-0 !py-2"
               iconColor="var(--color-brandAsh)"
               textColor="var(--color-brandAsh)"
             />
@@ -80,11 +81,11 @@ const DashboardNavbar = () => {
     },
     {
       key: "2",
-      label: <DropdownIcon Icon={PiGearBold} name="Brand settings" />,
+      label: <DropdownIcon Icon={PiGearBold} name="Brand settings"    margin="!py-2" />,
     },
     {
       key: "3",
-      label: <DropdownIcon Icon={PiSignOutBold} name="Log out" />,
+      label: <DropdownIcon Icon={PiSignOutBold} name="Log out" margin="!py-2" />,
     },
   ];
 
