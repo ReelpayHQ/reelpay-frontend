@@ -3,6 +3,7 @@
    @theme {
      --font-inter: "Inter", sans-serif;
      --color-brandPink: #FA18D0;
+     --color-brandPinkHover:#D705B0;
      --color-brandPinkDisabled: rgba(250, 24, 208, 0.4);
      --color-brandBlack: #12100C;
      --color-brandAsh: #645E63;
