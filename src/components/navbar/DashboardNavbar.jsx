@@ -6,12 +6,40 @@ import {
   PiCaretDownBold,
   PiCaretDownFill,
   PiChatCircleDotsBold,
+  PiCheck,
+  PiCheckBold,
+  PiFilePlusBold,
+  PiGearBold,
   PiPlus,
+  PiPlusBold,
+  PiSignOutBold,
   PiWallet,
   PiWalletBold,
 } from "react-icons/pi";
 import TextIcon from "./TextIcon";
 import glovoimg from "../../assets/images/img/glovo.png";
+import paystack from "../../assets/images/img/paystack.png";
+import BrandStatus from "../BrandStatus";
+
+const DropdownIcon = ({
+  name,
+  Icon,
+  iconColor = "var(--color-brandBlack)",
+  textColor = "text-brandBlack",
+  margin = "",
+  padding = "!px-4",
+}) => {
+  return (
+    <Flex
+      align="center"
+      gap={7}
+      className={`${margin} ${padding} hover:bg-brandAsh-300 !py-2`}
+    >
+      <Icon size={28} color={iconColor} />
+      <p className={`text-sm ${textColor}`}>{name}</p>
+    </Flex>
+  );
+};
 
 const DashboardNavbar = () => {
   const data = [
@@ -33,46 +61,30 @@ const DashboardNavbar = () => {
     {
       key: "1",
       label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
+        <div className="border-b border-brandAsh-900 pt-3 pb-2">
+          <div className="flex flex-col gap-5 px-4">
+            <BrandStatus img={glovoimg} name={"Glovo"} active={true} />
+            <BrandStatus img={paystack} name={"Paystack"} active={false} />
+          </div>
+          <div className="mt-3">
+            <DropdownIcon
+              Icon={PiPlus}
+              name="Add new brand"
+              margin="mt-0"
+              iconColor="var(--color-brandAsh)"
+              textColor="var(--color-brandAsh)"
+            />
+          </div>
+        </div>
       ),
     },
     {
       key: "2",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.aliyun.com"
-        >
-          2nd menu item (disabled)
-        </a>
-      ),
-      // icon: <SmileOutlined />,
-      // disabled: true,
+      label: <DropdownIcon Icon={PiGearBold} name="Brand settings" />,
     },
     {
       key: "3",
-      label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.luohanacademy.com"
-        >
-          3rd menu item (disabled)
-        </a>
-      ),
-      // disabled: true,
-    },
-    {
-      key: "4",
-      danger: true,
-      label: "a danger item",
+      label: <DropdownIcon Icon={PiSignOutBold} name="Log out" />,
     },
   ];
 
@@ -132,9 +144,13 @@ const DashboardNavbar = () => {
               className="w-full h-full rounded-full object-contain"
             />
           </div>
-          <div>
-            <Dropdown menu={{ items }}>
-              <PiCaretDownFill color="var(--color-brandAsh-500)" size={20} />
+          <div className="dropdownWrapper">
+            <Dropdown menu={{ items }} overlayClassName={"w-55 shadow-lg"}>
+              <PiCaretDownFill
+                color="var(--color-brandAsh-500)"
+                className="cursor-pointer"
+                size={20}
+              />
             </Dropdown>
           </div>
         </Flex>

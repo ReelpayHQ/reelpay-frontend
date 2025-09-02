@@ -61,7 +61,11 @@ export const componentTheme = {
     Table: {
       headerBg: "",
       headerSplitColor: "",
-      rowHoverBg: "var(--color-brandAsh-300)",
+      // rowHoverBg: "var(--color-brandAsh-300)",
     },
+    Dropdown:{
+      controlItemBgHover:'',
+      controlPaddingHorizontal:0
+    }
   },
 };

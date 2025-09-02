@@ -19,13 +19,13 @@
      --color-brandRed: #F43F5E;
      --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
-     --color-brandGreen-100:#11813C;
-     --color-brandOrange-100:#FFF7EA;
+     --color-brandGreen-100: #11813C;
+     --color-brandOrange-100: #FFF7EA;
      --text-size13: 13px;
-      --text-size16: 16px;
+     --text-size16: 16px;
      --text-size32: 32px;
      --shadow-sm: 0px 2px 4px 0px hsla(240, 9%, 46%, 0.12), 0px 0px 8px 0px hsla(240, 9%, 46%, 0.07), 0px 32px 13px 0px hsla(240, 9%, 46%, 0.01);
-     --radius-size5:5px;
+     --radius-size5: 5px;
 
      @keyframes scrollVertical {
        0% {
@@ -85,18 +85,37 @@
      font-weight: 500;
    }
 
-   .campaignTabWrapper .ant-tabs-top >.ant-tabs-nav::before{
-    border-bottom: 1px solid var(--color-brandAsh-900);
+   .campaignTabWrapper .ant-tabs-top>.ant-tabs-nav::before {
+     border-bottom: 1px solid var(--color-brandAsh-900);
    }
 
-   .tableWrapper .ant-table-wrapper table  {
-    border: 1px solid var(--color-brandAsh-900);
-    border-radius: 10px;
+   .tableWrapper .ant-table-wrapper table {
+     border: 1px solid var(--color-brandAsh-900);
+     border-radius: 10px;
    }
 
-     .tableWrapper .ant-table-wrapper .ant-table-thead >tr>th{
-font-weight: 500;
-font-size: 14px;
-color: var(--color-brandAsh-500);
+   .tableWrapper .ant-table-wrapper .ant-table-thead>tr>th {
+     font-weight: 500;
+     font-size: 14px;
+     color: var(--color-brandAsh-500);
+   }
 
-     }
+   /* .dropdownoverview .ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title {
+      color: red;
+     } */
+   /* .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item */
+   .ant-dropdown .ant-dropdown-menu {
+     padding: 0px !important;
+     background-attachment: red;
+     /* background: red !important; */
+   }
+
+   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+     padding: 0px;
+   }
+
+   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content {
+     /* color: red; */
+   }
+
+   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon{}
