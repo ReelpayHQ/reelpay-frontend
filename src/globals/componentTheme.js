@@ -49,5 +49,19 @@ export const componentTheme = {
       colorPrimary: "var(--color-brandBlack)",
       borderRadiusSM: 2,
     },
+    Tabs: {
+      inkBarColor: "var(--color-brandPink)",
+      itemColor: "var(--color-brandAsh)",
+      itemActiveColor: "var(--color-brandPink)",
+      itemHoverColor: "",
+      itemSelectedColor: "var(--color-brandPink)",
+      titleFontSize: "14px",
+      colorPrimaryBorder: "red",
+    },
+    Table: {
+      headerBg: "",
+      headerSplitColor: "",
+      rowHoverBg: "var(--color-brandAsh-300)",
+    },
   },
 };

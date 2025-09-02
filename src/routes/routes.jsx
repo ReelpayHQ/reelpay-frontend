@@ -5,6 +5,10 @@ import Signup from "../pages/public/Auth/Signup";
 import AuthWrapper from "../pages/public/Auth/AuthWrapper";
 import Resetpassword from "../pages/public/Auth/Resetpassword";
 import Onboarding from "../pages/public/Auth/Onboarding";
+import DashboardWrapper from "../pages/private/DashboardWrapper";
+import DiscoverCreators from "../pages/private/DiscoverCreators";
+import Campaign from "../pages/private/Campaign";
+import Dashboard from "../pages/private/Dashboard";
 
 export const routes = createBrowserRouter([
   {
@@ -31,5 +35,23 @@ export const routes = createBrowserRouter([
   {
     path: "/onboarding",
     element: <Onboarding />,
+  },
+
+  {
+    element: <DashboardWrapper />,
+    children: [
+      {
+        path: "/home",
+        element: <Dashboard />,
+      },
+      {
+        path: "/campaign",
+        element: <Campaign />,
+      },
+      {
+        path: "/discovercreators",
+        element: <DiscoverCreators />,
+      },
+    ],
   },
 ]);
