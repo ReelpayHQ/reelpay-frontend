@@ -10,6 +10,8 @@ import {
   PiCheckBold,
   PiFilePlusBold,
   PiGearBold,
+  PiHamburger,
+  PiList,
   PiPlus,
   PiPlusBold,
   PiSignOutBold,
@@ -28,7 +30,7 @@ export const DropdownIcon = ({
   textColor = "text-brandBlack",
   margin = "",
   padding = "!px-4",
-  size=28
+  size = 28,
 }) => {
   return (
     <Flex
@@ -81,11 +83,15 @@ const DashboardNavbar = () => {
     },
     {
       key: "2",
-      label: <DropdownIcon Icon={PiGearBold} name="Brand settings"    margin="!py-2" />,
+      label: (
+        <DropdownIcon Icon={PiGearBold} name="Brand settings" margin="!py-2" />
+      ),
     },
     {
       key: "3",
-      label: <DropdownIcon Icon={PiSignOutBold} name="Log out" margin="!py-2" />,
+      label: (
+        <DropdownIcon Icon={PiSignOutBold} name="Log out" margin="!py-2" />
+      ),
     },
   ];
 
@@ -93,13 +99,13 @@ const DashboardNavbar = () => {
     <Flex
       align="center"
       justify="space-between"
-      className="!px-15 !py-3 border-b border-brandAsh-900"
+      className="!px-5 !md:px-15 !py-3 border-b border-brandAsh-900"
     >
       <Flex align="center" gap={70}>
         <div>
           <CustomLogo />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="items-center gap-4 hidden md:flex">
           {data.map((nav) => (
             <NavLink
               to={nav.link}
@@ -133,7 +139,7 @@ const DashboardNavbar = () => {
           </Button>
         </div>
       </Flex>
-      <Flex align="center" gap={20}>
+      <div className="hidden md:flex items-center gap-20">
         <TextIcon icon={PiWalletBold} text={"150,000"} />
 
         <TextIcon icon={PiChatCircleDotsBold} text={"Inbox"} />
@@ -155,7 +161,10 @@ const DashboardNavbar = () => {
             </Dropdown>
           </div>
         </Flex>
-      </Flex>
+      </div>
+      <div className="block md:hidden">
+        <PiList size={30} color="var(--color-brandAsh)" />
+      </div>
     </Flex>
   );
 };
