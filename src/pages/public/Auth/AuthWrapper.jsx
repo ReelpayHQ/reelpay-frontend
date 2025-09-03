@@ -4,9 +4,10 @@ import reelpayAuthBg from "../../../assets/images/img/onboardingBgImage.png";
 import AuthHeading from "../../../components/AuthHeading";
 import Google from "../../../assets/images/svg/google.svg";
 import CustomLogo from "../../../components/CustomLogo";
+import { useState } from "react";
 
 const AuthWrapper = () => {
-  const user = "creator";
+  const [user, setUser] = useState("creator");
   const isCreator = user === "creator";
 
   const location = useLocation();
@@ -57,16 +58,23 @@ const AuthWrapper = () => {
                 <Outlet context={{ isCreator }} />
               </Flex>
             </div>
-            <div className="text-center py-2 md:p-0">
-              <p className="text-size13 capitalize text-brandAsh mt-4 md:mt-0">
-                Are you a {isCreator ? "Creator" : "Brand"}?{" "}
-                <Link to={isSignup ? "/login" : "/signup"}>
-                  <span className="text-brandPink">
-                    {isSignup ? "Log in" : "Sign up"} here
-                  </span>
-                </Link>
-              </p>
-            </div>
+            {isSignup ? (
+              <div className="text-center py-2 md:p-0">
+                <p className="text-size13 text-brandAsh mt-4 md:mt-0">
+                  Are you a {isCreator ? "creator" : "brand"}?
+                  <Link
+                    to={isSignup ? "/signup" : "/login"}
+                    onClick={() =>
+                      setUser(user === "creator" ? "brand" : "creator")
+                    }
+                  >
+                    <span className="text-brandPink">
+                      {isSignup ? " Sign up" : " Log in"} here
+                    </span>
+                  </Link>
+                </p>
+              </div>
+            ) : null}
           </div>
         </div>
       </Col>

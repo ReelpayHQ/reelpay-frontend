@@ -14,6 +14,7 @@ import {
 import { DropdownIcon } from "../navbar/DashboardNavbar";
 import CustomTable from "../table/CustomTable";
 import { CustomBrandName } from "../CustomBrandName";
+import ActionBadge from "../ActionBadge";
 
 const CompletedCampaignTab = () => {
   const items = [
@@ -54,22 +55,13 @@ const CompletedCampaignTab = () => {
       brandImg: energysupplement,
       briefName: "Energy health supplement",
       date: "Created Aug 23, 2025",
-      status: "Active",
+      status: "Completed",
       application: 8,
-      newapplication: 3,
-      approvedVideo: 1,
+      newapplication: 0,
+      approvedVideo: 4,
       totalVideo: 4,
-      action: ["Ship product", "Count product"],
-      hired: [
-        avatar1,
-        avatar3,
-        avatar2,
-        avatar1,
-        avatar1,
-        avatar3,
-        avatar2,
-        avatar1,
-      ],
+      action: "No action required",
+      hired: [avatar1, avatar3, avatar2, avatar1, avatar1],
     },
     {
       key: "2",
@@ -77,12 +69,13 @@ const CompletedCampaignTab = () => {
       brandImg: vitalityboost,
       briefName: "Vitality Boost formula",
       date: "Created Aug 23, 2025",
-      status: "Active",
+      status: "Completed",
       application: 5,
       newapplication: 0,
-      approvedVideo: 0,
+      approvedVideo: 2,
       totalVideo: 2,
       action: "No action required",
+      hired: [avatar1, avatar3],
     },
     {
       key: "3",
@@ -90,12 +83,12 @@ const CompletedCampaignTab = () => {
       brandImg: powerup,
       briefName: "Power Up Nutraceuticals",
       date: "Created Aug 23, 2025",
-      status: "Active",
+      status: "Completed",
       application: 11,
-      newapplication: 6,
-      approvedVideo: 3,
+      newapplication: 0,
+      approvedVideo: 4,
       totalVideo: 4,
-      action: ["Approve video"],
+      action: "No action required",
       hired: [avatar1, avatar3],
     },
   ];
@@ -169,24 +162,7 @@ const CompletedCampaignTab = () => {
                   <Flex align="center" gap={5}>
                     {data?.action?.slice(0, 1).map((action) => {
                       return (
-                        <Badge
-                          count={`${action}`}
-                          style={{
-                            backgroundColor: noAction
-                              ? "rgba(228, 252, 236, 1)"
-                              : "rgba(245, 243, 255, 1)",
-                            color: noAction
-                              ? "rgba(22, 163, 74, 1)"
-                              : "rgba(109, 40, 216, 1)",
-                            fontSize: "14px",
-                            fontWeight: "500",
-                            height: "27px",
-                            borderRadius: "100px",
-                            display: "flex",
-                            alignItems: "center",
-                            padding: "0px 20px",
-                          }}
-                        />
+                        <ActionBadge action={action} noAction={noAction}/>
                       );
                     })}
                     {data.action.length > 1 ? (
@@ -194,24 +170,7 @@ const CompletedCampaignTab = () => {
                     ) : null}
                   </Flex>
                 ) : (
-                  <Badge
-                    count={`${data.action}`}
-                    style={{
-                      backgroundColor: noAction
-                        ? "rgba(228, 252, 236, 1)"
-                        : "rgba(245, 243, 255, 1)",
-                      color: noAction
-                        ? "rgba(22, 163, 74, 1)"
-                        : "rgba(109, 40, 216, 1)",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      height: "27px",
-                      borderRadius: "100px",
-                      display: "flex",
-                      alignItems: "center",
-                      padding: "0px 20px",
-                    }}
-                  />
+                <ActionBadge action={data.action} noAction={noAction}/>
                 )}
               </>
             ),

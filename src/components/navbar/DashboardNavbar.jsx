@@ -88,7 +88,7 @@ const DashboardNavbar = () => {
             <NavLink to={nav.link}>
               {({ isActive }) => (
                 <span
-                  className={`text-sm font-medium transition-all duration-5 hover:text-xs ${
+                  className={`text-sm font-medium ${
                     isActive
                       ? "py-2 px-4 text-brandBlack bg-brandAsh-300 rounded-lg"
                       : "text-brandAsh"
