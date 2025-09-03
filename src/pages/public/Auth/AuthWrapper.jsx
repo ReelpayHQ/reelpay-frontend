@@ -59,7 +59,7 @@ const AuthWrapper = () => {
             </div>
             <div className="text-center py-2 md:p-0">
               <p className="text-size13 capitalize text-brandAsh mt-4 md:mt-0">
-                Are you a {!isCreator ? "Creator" : "Brand"}?{" "}
+                Are you a {isCreator ? "Creator" : "Brand"}?{" "}
                 <Link to={isSignup ? "/login" : "/signup"}>
                   <span className="text-brandPink">
                     {isSignup ? "Log in" : "Sign up"} here
