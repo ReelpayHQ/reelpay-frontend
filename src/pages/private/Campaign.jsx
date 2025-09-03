@@ -2,8 +2,10 @@ import { Button, Flex, Tabs } from "antd";
 import ActiveCampaignTab from "../../components/private/ActiveCampaignTab";
 import CompletedCampaignTab from "../../components/private/CompletedCampaignTab";
 import DrafCampaignTab from "../../components/private/DrafCampaignTab";
+import { useNavigate } from "react-router";
 
 const Campaign = () => {
+  const navigate = useNavigate()
   const onChange = (key) => {
     console.log(key);
   };
@@ -29,7 +31,9 @@ const Campaign = () => {
     <div>
       <Flex align="center" justify="space-between" className="!py-10">
         <h1 className="text-size32 font-semibold text-black">Campaigns</h1>
-        <Button className="!w-29" type="primary">
+        <Button className="!w-29" type="primary" onClick={()=>{
+          navigate('/createbrief')
+        }}>
           Create brief
         </Button>
       </Flex>
