@@ -61,17 +61,9 @@ export const componentTheme = {
       headerBg: "",
       headerSplitColor: "",
     },
-    Dropdown:{
-      controlItemBgHover:'',
-      controlPaddingHorizontal:0
+    Dropdown: {
+      controlItemBgHover: "",
+      controlPaddingHorizontal: 0,
     },
-    Radio:{
-      // colorPrimaryHover:'red'
-    //  buttonSolidCheckedBg:'red',
-    //  colorPrimaryBorder:'green',
-    //  buttonColor:'purple',
-    //  buttonSolidCheckedActiveBg:'black',
-    //  buttonSolidCheckedColor:'red'
-    }
   },
 };

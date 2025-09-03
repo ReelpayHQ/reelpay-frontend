@@ -39,8 +39,8 @@ export const routes = createBrowserRouter([
   },
 
   {
-    path:'createbrief',
-    element:<CreateBrief/>
+    path: "createbrief",
+    element: <CreateBrief />,
   },
   {
     element: <DashboardWrapper />,

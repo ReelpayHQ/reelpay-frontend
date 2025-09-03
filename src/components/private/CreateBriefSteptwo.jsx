@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CreateBriefSteptwo = () => {
-  return (
-    <div>CreateBriefSteptwo</div>
-  )
-}
+  return <div>CreateBriefSteptwo</div>;
+};
 
-export default CreateBriefSteptwo
+export default CreateBriefSteptwo;
