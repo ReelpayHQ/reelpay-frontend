@@ -16,6 +16,7 @@ import {
 import { DropdownIcon } from "../navbar/DashboardNavbar";
 import CustomTable from "../table/CustomTable";
 import { CustomBrandName } from "../CustomBrandName";
+import ActionBadge from "../ActionBadge";
 
 const ActiveCampaignTab = () => {
   const items = [
@@ -199,24 +200,7 @@ const ActiveCampaignTab = () => {
                   <Flex align="center" gap={5}>
                     {data?.action?.slice(0, 1).map((action) => {
                       return (
-                        <Badge
-                          count={`${action}`}
-                          style={{
-                            backgroundColor: noAction
-                              ? "rgba(228, 252, 236, 1)"
-                              : "rgba(245, 243, 255, 1)",
-                            color: noAction
-                              ? "rgba(22, 163, 74, 1)"
-                              : "rgba(109, 40, 216, 1)",
-                            fontSize: "14px",
-                            fontWeight: "500",
-                            height: "27px",
-                            borderRadius: "100px",
-                            display: "flex",
-                            alignItems: "center",
-                            padding: "0px 20px",
-                          }}
-                        />
+                        <ActionBadge action={action} noAction={noAction} />
                       );
                     })}
                     {data.action.length > 1 ? (
@@ -224,24 +208,7 @@ const ActiveCampaignTab = () => {
                     ) : null}
                   </Flex>
                 ) : (
-                  <Badge
-                    count={`${data.action}`}
-                    style={{
-                      backgroundColor: noAction
-                        ? "rgba(228, 252, 236, 1)"
-                        : "rgba(245, 243, 255, 1)",
-                      color: noAction
-                        ? "rgba(22, 163, 74, 1)"
-                        : "rgba(109, 40, 216, 1)",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      height: "27px",
-                      borderRadius: "100px",
-                      display: "flex",
-                      alignItems: "center",
-                      padding: "0px 20px",
-                    }}
-                  />
+                  <ActionBadge action={data.action} noAction={noAction} />
                 )}
               </>
             ),
