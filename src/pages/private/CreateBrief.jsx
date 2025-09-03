@@ -1,8 +1,10 @@
-import { Button, Col, Row, Steps } from "antd";
+import { Button, Col, Flex, Row, Steps } from "antd";
 import { useState } from "react";
 import CreateBriefStepone from "../../components/private/CreateBriefStepone";
 import CreateBriefStepthree from "../../components/private/CreateBriefStepthree";
 import CreateBriefSteptwo from "../../components/private/CreateBriefSteptwo";
+import FormBlock from "../../components/FormBlock";
+import { PiImage } from "react-icons/pi";
 
 const items = [CreateBriefStepone, CreateBriefSteptwo, CreateBriefStepthree];
 const stepItem = [
@@ -59,11 +61,35 @@ const CreateBrief = () => {
       </div>
       <div className="px-40 py-10">
         <Row gutter={"40"}>
-          <Col span={16} className="border border-green-500">
+          <Col span={16}>
             <RenderComponent />
           </Col>
-          <Col span={8} className="border border-amber-500">
-            creator
+          <Col span={8}>
+            <div className="flex flex-col gap-4">
+              <FormBlock title={"What creators see"} style="pt-4 pb-0">
+                <div className="px-4">
+                  <div className="border-t-7 border-r-7 border-l-7 border-brandAshBold h-61 rounded-t-3xl px-5">
+                    <div className="w-11.5 h-1.5 rounded-size100 bg-brandAsh-900 m-auto mt-3" />
+                    <div className="h-35 rounded-lg bg-brandAsh-900 mt-3 p-3">
+                      <Flex align="center" gap={3}>
+                        <div className="w-5 h-3.5 rounded-xs bg-brandAshBold " />
+                        <div className="w-5 h-3.5 rounded-xs bg-brandAshBold " />
+                      </Flex>
+                      <div className="w-12 h-12 m-auto mt-7">
+                        <PiImage
+                          className="w-full h-full"
+                          color="var(--color-brandAsh-500)"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-1 mt-3">
+                      <div className="h-3 rounded-lg bg-brandAsh-300" />
+                      <div className="w-45 h-3 rounded-lg bg-brandAsh-300" />
+                    </div>
+                  </div>
+                </div>
+              </FormBlock>
+            </div>
           </Col>
         </Row>
       </div>

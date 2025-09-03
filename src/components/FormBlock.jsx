@@ -1,8 +1,8 @@
 import React from "react";
 
-const FormBlock = ({ title, children }) => {
+const FormBlock = ({ title, style = "py-4", children }) => {
   return (
-    <div className="rounded-lg bg-white shadow-formblock py-4">
+    <div className={`rounded-lg bg-white shadow-formblock ${style}`}>
       <h1 className="font-semibold text-size16 text-brandBlack border-b border-brandAsh-900 px-5 pb-2">
         {title}
       </h1>
