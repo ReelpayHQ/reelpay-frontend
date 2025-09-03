@@ -3,7 +3,7 @@
    @theme {
      --font-inter: "Inter", sans-serif;
      --color-brandPink: #FA18D0;
-     --color-brandPinkHover:#D705B0;
+     --color-brandPinkHover: #D705B0;
      --color-brandPinkDisabled: rgba(250, 24, 208, 0.4);
      --color-brandBlack: #12100C;
      --color-brandAsh: #645E63;
@@ -15,13 +15,17 @@
      --color-brandAsh-600: #F6F4F6;
      --color-brandAsh-700: #7D8191;
      --color-brandAsh-800: #EFECEF;
+     --color-brandAsh-900: #E7E4E6;
      --color-brandRed: #F43F5E;
      --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
+     --color-brandGreen-100: #11813C;
+     --color-brandOrange-100: #FFF7EA;
      --text-size13: 13px;
+     --text-size16: 16px;
      --text-size32: 32px;
      --shadow-sm: 0px 2px 4px 0px hsla(240, 9%, 46%, 0.12), 0px 0px 8px 0px hsla(240, 9%, 46%, 0.07), 0px 32px 13px 0px hsla(240, 9%, 46%, 0.01);
-
+     --radius-size5: 5px;
 
      @keyframes scrollVertical {
        0% {
@@ -71,4 +75,27 @@
      a:nth-of-type(2) .logo {
        animation: logo-spin infinite 20s linear;
      }
+   }
+
+   .campaignTabWrapper .ant-tabs .ant-tabs-tab {
+     font-weight: 400;
+   }
+
+   .campaignTabWrapper .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+     font-weight: 500;
+   }
+
+   .campaignTabWrapper .ant-tabs-top>.ant-tabs-nav::before {
+     border-bottom: 1px solid var(--color-brandAsh-900);
+   }
+
+   .tableWrapper .ant-table-wrapper table {
+     border: 1px solid var(--color-brandAsh-900);
+     border-radius: 10px;
+   }
+
+   .tableWrapper .ant-table-wrapper .ant-table-thead>tr>th {
+     font-weight: 500;
+     font-size: 14px;
+     color: var(--color-brandAsh-500);
    }

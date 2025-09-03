@@ -3,7 +3,6 @@ import { Checkbox } from "antd";
 export const componentTheme = {
   token: {
     borderRadius: 8,
-    // controlHeight: 44,
   },
   components: {
     Button: {
@@ -29,7 +28,7 @@ export const componentTheme = {
       activeBorderColor: "var(--color-brandPink)",
       hoverBorderColor: "var(--color-brandPink)",
       colorBorder: "var(--color-brandAsh-400)",
-      controlHeight: 40,
+      controlHeight: 48,
       colorIcon: "var(--color-brandAsh)",
       colorError: "var(--color-brandRed)",
     },
@@ -37,7 +36,7 @@ export const componentTheme = {
       activeBorderColor: "var(--color-brandPink)",
       hoverBorderColor: "var(--color-brandPink)",
       colorBorder: "var(--color-brandAsh-400)",
-      controlHeight: 44,
+      controlHeight: 48,
       colorIcon: "var(--color-brandAsh)",
       colorError: "var(--color-brandRed)",
       optionSelectedBg: "var(--color-brandPink)",
@@ -49,5 +48,22 @@ export const componentTheme = {
       colorPrimary: "var(--color-brandBlack)",
       borderRadiusSM: 2,
     },
+    Tabs: {
+      inkBarColor: "var(--color-brandPink)",
+      itemColor: "var(--color-brandAsh)",
+      itemActiveColor: "var(--color-brandPink)",
+      itemHoverColor: "",
+      itemSelectedColor: "var(--color-brandPink)",
+      titleFontSize: "14px",
+      colorPrimaryBorder: "red",
+    },
+    Table: {
+      headerBg: "",
+      headerSplitColor: "",
+    },
+    Dropdown:{
+      controlItemBgHover:'',
+      controlPaddingHorizontal:0
+    }
   },
 };

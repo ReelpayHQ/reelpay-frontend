@@ -12,10 +12,6 @@ import {
   industryOptions,
   positionOptions,
 } from "../../../data/optiondropdowns";
-import { useState } from "react";
-import imgsrc from "../../../assets/images/img/bg-test.jpg";
-import ReactCrop from "react-image-crop";
-import Cropper from "react-easy-crop";
 import OnboardingForms from "./OnboardingForms";
 
 const initialValue = {
