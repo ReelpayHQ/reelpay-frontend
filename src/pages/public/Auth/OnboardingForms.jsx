@@ -4,7 +4,6 @@ import { useCallback, useMemo, useState } from "react";
 import { PiUploadSimpleBold } from "react-icons/pi";
 import ErrorText from "../../../components/ErrorText";
 import Cropper from "react-easy-crop";
-// import imgsrc from "../../../assets/images/img/bg-test.jpg";
 
 const OnboardingForms = () => {
   const { values, setFieldValue, errors } = useFormikContext();

@@ -1,31 +1,29 @@
 import { Button, Flex, Tabs } from "antd";
-import React from "react";
 import ActiveCampaignTab from "../../components/private/ActiveCampaignTab";
 import CompletedCampaignTab from "../../components/private/CompletedCampaignTab";
 import DrafCampaignTab from "../../components/private/DrafCampaignTab";
 
 const Campaign = () => {
-
-    const onChange = key => {
-  console.log(key);
-};
-const items = [
-  {
-    key: '1',
-    label: 'Active',
-    children: <ActiveCampaignTab/>,
-  },
-  {
-    key: '2',
-    label: 'Draft',
-    children: <DrafCampaignTab/>,
-  },
-  {
-    key: '3',
-    label: 'Completed',
-    children: <CompletedCampaignTab/>,
-  },
-];
+  const onChange = (key) => {
+    console.log(key);
+  };
+  const items = [
+    {
+      key: "1",
+      label: "Active",
+      children: <ActiveCampaignTab />,
+    },
+    {
+      key: "2",
+      label: "Draft",
+      children: <DrafCampaignTab />,
+    },
+    {
+      key: "3",
+      label: "Completed",
+      children: <CompletedCampaignTab />,
+    },
+  ];
 
   return (
     <div>

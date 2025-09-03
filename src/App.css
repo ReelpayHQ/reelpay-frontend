@@ -99,23 +99,3 @@
      font-size: 14px;
      color: var(--color-brandAsh-500);
    }
-
-   /* .dropdownoverview .ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-submenu-title {
-      color: red;
-     } */
-   /* .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item */
-   .ant-dropdown .ant-dropdown-menu {
-     padding: 0px !important;
-     background-attachment: red;
-     /* background: red !important; */
-   }
-
-   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
-     padding: 0px;
-   }
-
-   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content {
-     /* color: red; */
-   }
-
-   .dropdownoverview .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item-icon{}

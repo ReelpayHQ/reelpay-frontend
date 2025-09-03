@@ -1,27 +1,20 @@
-import { Button, Dropdown, Flex, List } from "antd";
-import React from "react";
+import { Button, Dropdown, Flex } from "antd";
 import CustomLogo from "../CustomLogo";
 import { NavLink } from "react-router";
 import {
-  PiCaretDownBold,
   PiCaretDownFill,
   PiChatCircleDotsBold,
-  PiCheck,
-  PiCheckBold,
-  PiFilePlusBold,
   PiGearBold,
-  PiHamburger,
   PiList,
   PiPlus,
-  PiPlusBold,
   PiSignOutBold,
-  PiWallet,
   PiWalletBold,
 } from "react-icons/pi";
 import TextIcon from "./TextIcon";
 import glovoimg from "../../assets/images/img/glovo.png";
 import paystack from "../../assets/images/img/paystack.png";
 import BrandStatus from "../BrandStatus";
+import { navbarData } from "../../data/navbarData";
 
 export const DropdownIcon = ({
   name,
@@ -45,21 +38,6 @@ export const DropdownIcon = ({
 };
 
 const DashboardNavbar = () => {
-  const data = [
-    {
-      name: "Home",
-      link: "/home",
-    },
-    {
-      name: "Campaign",
-      link: "/campaign",
-    },
-    {
-      name: "Discover creators",
-      link: "/discovercreators",
-    },
-  ];
-
   const items = [
     {
       key: "1",
@@ -106,16 +84,8 @@ const DashboardNavbar = () => {
           <CustomLogo />
         </div>
         <div className="items-center gap-4 hidden md:flex">
-          {data.map((nav) => (
-            <NavLink
-              to={nav.link}
-              //                   className={({ isActive, isPending }) =>
-              //      isActive ? "bg-red-500" : ""
-              //   }
-
-              // style={}
-            >
-              {/* <p> */}
+          {navbarData.map((nav) => (
+            <NavLink to={nav.link}>
               {({ isActive }) => (
                 <span
                   className={`text-sm font-medium transition-all duration-5 hover:text-xs ${
@@ -127,7 +97,6 @@ const DashboardNavbar = () => {
                   {nav.name}
                 </span>
               )}
-              {/* {nav.name}</p> */}
             </NavLink>
           ))}
           <Button

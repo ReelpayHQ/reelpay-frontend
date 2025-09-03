@@ -6,9 +6,9 @@ const DashboardWrapper = () => {
   return (
     <div>
       <DashboardNavbar />
-     <div className="px-5 md:px-40">
-         <Outlet />
-     </div>
+      <div className="px-5 md:px-40">
+        <Outlet />
+      </div>
     </div>
   );
 };
