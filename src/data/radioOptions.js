@@ -1,9 +1,11 @@
 import {
   PiCircleHalfFill,
   PiDeviceMobileCamera,
+  PiDevicesFill,
   PiFilmStripFill,
   PiSplitHorizontalBold,
   PiSquareBold,
+  PiTagFill,
   PiUsersFill,
   PiVideoCameraFill,
 } from "react-icons/pi";
@@ -27,6 +29,26 @@ const serviceOptions = [
     icon: PiUsersFill,
     description:
       "Videos are done by the creators and posted directly to their feed.",
+  },
+];
+
+const productOptions = [
+  {
+    label: "Physical",
+    value: "physical",
+
+    title: "Physical product",
+    icon: PiTagFill,
+    description:
+      "An item that must be shipped to the creator for use in the content.",
+  },
+  {
+    label: "Digital",
+    value: "digital",
+    title: "Digital product",
+    icon: PiDevicesFill,
+    description:
+      "An item (like an app, file, or link) that can be shared online.",
   },
 ];
 
@@ -100,4 +122,5 @@ export {
   platformOptions,
   durationOptions,
   aspectRatioOptions,
+  productOptions
 };

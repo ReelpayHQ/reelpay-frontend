@@ -1,5 +1,4 @@
 import { Flex } from "antd";
-import React from "react";
 
 const TextIcon = ({ icon, text }) => {
   const IconComponent = icon;

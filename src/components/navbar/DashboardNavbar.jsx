@@ -5,11 +5,9 @@ import {
   PiCaretDownFill,
   PiChatCircleDotsBold,
   PiGear,
-  PiGearBold,
   PiList,
   PiPlus,
   PiSignOut,
-  PiSignOutBold,
   PiWalletBold,
 } from "react-icons/pi";
 import TextIcon from "./TextIcon";

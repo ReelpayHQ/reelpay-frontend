@@ -1,5 +1,4 @@
 import { Avatar, Flex } from "antd";
-import React from "react";
 
 export const CustomBrandName = ({ data, showMore }) => {
   return (
