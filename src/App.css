@@ -22,6 +22,7 @@
      --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
      --color-brandGreen-100: #11813C;
+     --color-brandOrange:#C2410C;
      --color-brandOrange-100: #FFF7EA;
      --color-brandPurple: #6D28D8;
      --color-brandPurple-100: #F5F3FF;
@@ -111,7 +112,8 @@
 
    .stepwrapper .ant-steps .ant-steps-item-finish .ant-steps-item-icon {
      background-color: transparent;
-     border-color: #e6f4ff;
+     border-color: var(--color-brandAsh);
+    color: var(--color-brandAsh);
    }
 
    .stepwrapper .ant-steps-item .ant-steps-item-process .ant-steps-item-active {
@@ -150,6 +152,10 @@
 
    .stepwrapper .ant-steps .ant-steps-item {
      flex: none;
+   }
+
+     .stepwrapper .anticon svg {
+    color:var(--color-brandAsh);
    }
 
    .radioWrapper .ant-radio-button-wrapper {

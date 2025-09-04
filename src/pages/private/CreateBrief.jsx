@@ -4,7 +4,7 @@ import CreateBriefStepone from "../../components/private/CreateBriefStepone";
 import CreateBriefStepthree from "../../components/private/CreateBriefStepthree";
 import CreateBriefSteptwo from "../../components/private/CreateBriefSteptwo";
 import FormBlock from "../../components/FormBlock";
-import { PiImage } from "react-icons/pi";
+import { PiImage, PiInfoFill, PiPlusBold } from "react-icons/pi";
 
 const items = [CreateBriefStepone, CreateBriefSteptwo, CreateBriefStepthree];
 const stepItem = [
@@ -37,12 +37,22 @@ const CreateBrief = () => {
     <div className="bg-brandAsh-300">
       <div className="py-3 px-10 bg-white shadow-light">
         <Row>
-          <Col span={9} offset={8}>
+          <Col
+            xs={{ span: 24, offset: 0 }}
+            sm={{ span: 24, offset: 0 }}
+            md={{ span: 12, offset: 0 }}
+            lg={{ span: 9, offset: 8 }}
+          >
             <div className="stepwrapper">
               <Steps current={current} items={stepItem} />
             </div>
           </Col>
-          <Col span={4} offset={3}>
+          <Col
+            xs={{ span: 24, offset: 0 }}
+            sm={{ span: 24, offset: 0 }}
+            md={{ span: 12, offset: 0 }}
+            lg={{ span: 4, offset: 3 }}
+          >
             <div className="flex gap-5 justify-self-end place-self-end">
               <Button type="default" className="!h-8.5">
                 Save & exit
@@ -59,15 +69,25 @@ const CreateBrief = () => {
           </Col>
         </Row>
       </div>
-      <div className="px-40 py-10">
+      <div className=" px-3 md:px-40 py-10">
         <Row gutter={"40"}>
-          <Col span={16}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 16 }}
+          >
             <RenderComponent />
           </Col>
-          <Col span={8}>
+          <Col
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            md={{ span: 12 }}
+            lg={{ span: 8 }}
+          >
             <div className="flex flex-col gap-4">
               <FormBlock title={"What creators see"} style="pt-4 pb-0">
-                <div className="px-4">
+                <div className="px-3">
                   <div className="border-t-7 border-r-7 border-l-7 border-brandAshBold h-61 rounded-t-3xl px-5">
                     <div className="w-11.5 h-1.5 rounded-size100 bg-brandAsh-900 m-auto mt-3" />
                     <div className="h-35 rounded-lg bg-brandAsh-900 mt-3 p-3">
@@ -86,6 +106,56 @@ const CreateBrief = () => {
                       <div className="h-3 rounded-lg bg-brandAsh-300" />
                       <div className="w-45 h-3 rounded-lg bg-brandAsh-300" />
                     </div>
+                  </div>
+                </div>
+              </FormBlock>
+
+              <FormBlock title={""} style="pt-4 pb-0" childrenStyle="px-0">
+                <div>
+                  <div className="px-3">
+                    <h1 className="font-semibold text-size16 text-black">
+                      Order Summary
+                    </h1>
+                    <div className="py-3 border-b border-brandAsh-900 flex flex-col gap-2">
+                      <Flex align="center" justify="space-between">
+                        <p className="text-brandAsh text-sm">
+                          15 - 30 sec video
+                        </p>
+                        <p className="text-brandBlack font-medium text-sm">
+                          ₦50k - ₦100k
+                        </p>
+                      </Flex>
+                      <div>
+                        <Button
+                          type="link"
+                          className="!p-0 !text-brandAsh !h-0"
+                          onClick={() => {}}
+                          icon={<PiPlusBold />}
+                        >
+                          Add coupon code
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="pt-3 pb-2">
+                      <Flex align="center" justify="space-between">
+                        <p className="text-sm text-brandBlack">Total</p>
+                        <p className="text-size16 font-semibold text-brandPink">
+                          ₦50k - ₦100k
+                        </p>
+                      </Flex>
+                      <p className="mt-5 text-xs text-brandAsh-200">
+                        Total price will depend on the chosen creator.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-brandOrange-100 rounded-lg px-3.5 py-3">
+                    <Flex align="" gap={6}>
+                      <PiInfoFill size={30} color="var(--color-brandPink)" />
+                      <p className="text-sm font-semibold leading-4 text-brandOrange max-w-58">
+                        Funds will be auto deducted from your wallet after
+                        approving a creator.
+                      </p>
+                    </Flex>
                   </div>
                 </div>
               </FormBlock>
