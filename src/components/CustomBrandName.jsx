@@ -4,7 +4,7 @@ import React from "react";
 export const CustomBrandName = ({ data, showMore }) => {
   return (
     <Flex align="center" gap={10}>
-      <div className=" w-16 h-10 rounded-[5px]">
+      <div className=" w-14 h-10.5 rounded-[5px]">
         <img
           src={data.brandImg}
           className="w-full h-full rounded-size5 object-conver"

@@ -3,6 +3,7 @@
    @theme {
      --font-inter: "Inter", sans-serif;
      --color-brandPink: #FA18D0;
+     --color-brandPink-100: #FBEEF9;
      --color-brandPinkHover: #D705B0;
      --color-brandPinkDisabled: rgba(250, 24, 208, 0.4);
      --color-brandBlack: #12100C;
@@ -16,16 +17,23 @@
      --color-brandAsh-700: #7D8191;
      --color-brandAsh-800: #EFECEF;
      --color-brandAsh-900: #E7E4E6;
+     --color-brandAshBold: #C2BCC1;
      --color-brandRed: #F43F5E;
      --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
      --color-brandGreen-100: #11813C;
+     --color-brandOrange: #C2410C;
      --color-brandOrange-100: #FFF7EA;
+     --color-brandPurple: #6D28D8;
+     --color-brandPurple-100: #F5F3FF;
      --text-size13: 13px;
      --text-size16: 16px;
      --text-size32: 32px;
      --shadow-sm: 0px 2px 4px 0px hsla(240, 9%, 46%, 0.12), 0px 0px 8px 0px hsla(240, 9%, 46%, 0.07), 0px 32px 13px 0px hsla(240, 9%, 46%, 0.01);
+     --shadow-formblock: 0px 0px 1px 0px #00000029, 0px 1px 4px 0px #00000014;
+     --shadow-light: 0px 1px 2px 0px #00000014;
      --radius-size5: 5px;
+     --radius-size100: 100px;
 
      @keyframes scrollVertical {
        0% {
@@ -98,4 +106,104 @@
      font-weight: 500;
      font-size: 14px;
      color: var(--color-brandAsh-500);
+   }
+
+   .stepwrapper {}
+
+   .stepwrapper .ant-steps .ant-steps-item-finish .ant-steps-item-icon {
+     background-color: transparent;
+     border-color: var(--color-brandAsh);
+     color: var(--color-brandAsh);
+   }
+
+   .stepwrapper .ant-steps-item .ant-steps-item-process .ant-steps-item-active {
+     /* background-color: red; */
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-process .ant-steps-item-icon {
+     background-color: transparent;
+     border: 1px solid var(--color-brandPink);
+     width: 18px;
+     height: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon {
+     color: var(--color-brandPink);
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+     color: var(--color-brandPink);
+     font-size: 14px;
+     font-weight: 500;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-wait .ant-steps-item-icon {
+     background-color: transparent;
+     border: 1px solid var(--color-brandAsh);
+     width: 18px;
+     height: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+     color: var(--color-brandAsh);
+     font-size: 14px;
+     font-weight: 400;
+   }
+
+
+
+   .stepwrapper .ant-steps.ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item {
+     padding-inline-start: 0px;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-container {
+     display: flex;
+     align-items: center;
+   }
+
+   .ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
+     width: 0;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item {
+     flex: none;
+   }
+
+   .stepwrapper .anticon svg {
+     color: var(--color-brandAsh);
+   }
+
+   .radioWrapper .ant-radio-button-wrapper {
+     border: 1px solid var(--color-brandAsh-900);
+     border-radius: var(--radius-lg);
+   }
+
+   .test .ant-radio-button-wrapper {
+     border: 1px solid var(--color-brandAsh-900);
+     border-radius: 100px;
+   }
+
+   .radioWrapper .ant-radio-button-wrapper:not(:first-child)::before {
+     width: 0;
+   }
+
+   .radioWrapper .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+     border: 1px solid var(--color-brandPink);
+     background-color: #FDF7FC;
+     color: var(--color-brandBlack);
+   }
+
+   .radioWrapper .ant-radio-button-wrapper:hover {
+     color: var(--color-brandBlack);
+   }
+
+   .radioWrapper .ant-radio-button-wrapper {
+     height: auto;
+     padding-inline: 0px;
    }

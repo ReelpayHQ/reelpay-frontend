@@ -9,6 +9,7 @@ import DashboardWrapper from "../pages/private/DashboardWrapper";
 import DiscoverCreators from "../pages/private/DiscoverCreators";
 import Campaign from "../pages/private/Campaign";
 import Dashboard from "../pages/private/Dashboard";
+import CreateBrief from "../pages/private/CreateBrief";
 
 export const routes = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const routes = createBrowserRouter([
     element: <Onboarding />,
   },
 
+  {
+    path: "createbrief",
+    element: <CreateBrief />,
+  },
   {
     element: <DashboardWrapper />,
     children: [

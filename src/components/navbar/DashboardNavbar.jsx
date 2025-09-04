@@ -4,9 +4,11 @@ import { NavLink } from "react-router";
 import {
   PiCaretDownFill,
   PiChatCircleDotsBold,
+  PiGear,
   PiGearBold,
   PiList,
   PiPlus,
+  PiSignOut,
   PiSignOutBold,
   PiWalletBold,
 } from "react-icons/pi";
@@ -23,7 +25,7 @@ export const DropdownIcon = ({
   textColor = "text-brandBlack",
   margin = "",
   padding = "!px-4",
-  size = 28,
+  size = 24,
 }) => {
   return (
     <Flex
@@ -62,14 +64,12 @@ const DashboardNavbar = () => {
     {
       key: "2",
       label: (
-        <DropdownIcon Icon={PiGearBold} name="Brand settings" margin="!py-2" />
+        <DropdownIcon Icon={PiGear} name="Brand settings" margin="!py-2" />
       ),
     },
     {
       key: "3",
-      label: (
-        <DropdownIcon Icon={PiSignOutBold} name="Log out" margin="!py-2" />
-      ),
+      label: <DropdownIcon Icon={PiSignOut} name="Log out" margin="!py-2" />,
     },
   ];
 
@@ -108,7 +108,7 @@ const DashboardNavbar = () => {
           </Button>
         </div>
       </Flex>
-      <div className="hidden md:flex items-center gap-20">
+      <div className="hidden md:flex items-center gap-6">
         <TextIcon icon={PiWalletBold} text={"150,000"} />
 
         <TextIcon icon={PiChatCircleDotsBold} text={"Inbox"} />

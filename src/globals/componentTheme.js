@@ -61,9 +61,9 @@ export const componentTheme = {
       headerBg: "",
       headerSplitColor: "",
     },
-    Dropdown:{
-      controlItemBgHover:'',
-      controlPaddingHorizontal:0
-    }
+    Dropdown: {
+      controlItemBgHover: "",
+      controlPaddingHorizontal: 0,
+    },
   },
 };
