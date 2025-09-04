@@ -3,7 +3,6 @@ export const fileSizeValidation = (value, fileSizeMB = 2) => {
   return value.size <= MAX_FILE_SIZE;
 };
 
-
 export function bytesToKb(bytes) {
-    return Math.round(bytes / 1024);
+  return Math.round(bytes / 1024);
 }

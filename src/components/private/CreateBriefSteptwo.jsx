@@ -61,8 +61,6 @@ const CreateBriefSteptwo = () => {
   const briefDetailCounts =
     briefDetail.trim() === "" ? 0 : briefDetail.trim().length;
 
-  console.log(attachement, "attachement");
-
   return (
     <>
       <Modal

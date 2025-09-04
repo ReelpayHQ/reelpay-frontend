@@ -11,4 +11,4 @@ const wordCount = (value, maxWords) => {
 const briefNameMaxWords = 80;
 const briefDetailMaxWords = 500;
 
-export {wordCount,briefNameMaxWords,briefDetailMaxWords}
+export { wordCount, briefNameMaxWords, briefDetailMaxWords };

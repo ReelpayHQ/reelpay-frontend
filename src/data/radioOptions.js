@@ -122,5 +122,5 @@ export {
   platformOptions,
   durationOptions,
   aspectRatioOptions,
-  productOptions
+  productOptions,
 };

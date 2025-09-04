@@ -7,9 +7,7 @@ export const CustomCheckbox = ({ label, title, ...props }) => {
     <>
       {title ? <TitleHeading text={title} /> : null}
       <Checkbox {...props}>
-        <p className="text-sm text-brandAsh">
-          {label}
-        </p>
+        <p className="text-sm text-brandAsh">{label}</p>
       </Checkbox>
     </>
   );
