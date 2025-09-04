@@ -23,11 +23,12 @@ const CreateBrief = () => {
 
   const RenderComponent = items[current];
 
-  const isLastStep = items.length - 1;
+  const lastStep = items.length - 1;
+  const isLastStep = lastStep == current;
 
   const goToNextStep = () => {
-    if (current === isLastStep) {
-      setCurrent(isLastStep);
+    if (isLastStep) {
+      setCurrent(lastStep);
     } else {
       setCurrent((prev) => prev + 1);
     }
@@ -61,7 +62,7 @@ const CreateBrief = () => {
                 type="primary"
                 className="!w-18 !h-8.5"
                 onClick={goToNextStep}
-                disabled={isLastStep === current}
+                disabled={isLastStep}
               >
                 {isLastStep ? "Finish" : "Next"}
               </Button>

@@ -114,6 +114,11 @@
      background-color: transparent;
      border-color: var(--color-brandAsh);
      color: var(--color-brandAsh);
+     width: 18px;
+     height: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
    }
 
    .stepwrapper .ant-steps-item .ant-steps-item-process .ant-steps-item-active {
@@ -177,6 +182,7 @@
 
    .stepwrapper .anticon svg {
      color: var(--color-brandAsh);
+     font-size: 11px;
    }
 
    .radioWrapper .ant-radio-button-wrapper {
