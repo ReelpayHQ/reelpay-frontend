@@ -6,9 +6,11 @@ export const CustomCheckbox = ({ label, title, ...props }) => {
   return (
     <>
       {title ? <TitleHeading text={title} /> : null}
-      <Checkbox {...props}>
-        <p className="text-sm text-brandAsh">{label}</p>
-      </Checkbox>
+      <div className="customcheckboxstyle">
+        <Checkbox {...props}>
+          <p className="text-sm text-brandAsh">{label}</p>
+        </Checkbox>
+      </div>
     </>
   );
 };

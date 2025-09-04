@@ -14,9 +14,9 @@ import {
 } from "../../data/optiondropdowns";
 
 const CreateBriefStepthree = () => {
-  const [lifeStyles, setLifeStyle] = useState("");
-  const [appearance, setAppearance] = useState("");
-  const [interest, setInterest] = useState("");
+  const [lifeStyles, setLifeStyle] = useState([]);
+  const [appearance, setAppearance] = useState([]);
+  const [interest, setInterest] = useState([]);
   const [location, setLocation] = useState([]);
   const [age, setAge] = useState([]);
   const [language, setLanguage] = useState([]);
@@ -26,12 +26,12 @@ const CreateBriefStepthree = () => {
       <FormBlock title={"Demography"}>
         <div className="flex flex-col gap-7">
           <div>
+            <TitleHeading text={"Creator location"} />
             <Checkbox.Group
               value={location}
               onChange={(e) => setLocation([...e])}
             >
               <CustomCheckbox
-                title="Creator location"
                 value={"Nigeria"}
                 label={
                   <span className="flex items-center gap-9">
@@ -79,7 +79,7 @@ const CreateBriefStepthree = () => {
               onChange={(e) => setLanguage([...e])}
             >
               {languageOptions.map((language, key) => (
-                <CustomCheckbox key={key} label={language} />
+                <CustomCheckbox key={key} label={language} value={language} />
               ))}
             </Checkbox.Group>
           </div>
@@ -95,7 +95,16 @@ const CreateBriefStepthree = () => {
                 <CustomTag
                   key={key}
                   text={appearanceText}
-                  onClick={() => setAppearance(appearanceText)}
+                  onClick={() => {
+                    if (appearance.includes(appearanceText)) {
+                      const filteredvalue = appearance.filter(
+                        (item) => item !== appearanceText
+                      );
+                      setAppearance(filteredvalue);
+                    } else {
+                      setAppearance((prev) => [...prev, appearanceText]);
+                    }
+                  }}
                   value={appearance}
                 />
               ))}
@@ -109,7 +118,16 @@ const CreateBriefStepthree = () => {
                 <CustomTag
                   key={key}
                   text={lifestyle}
-                  onClick={() => setLifeStyle(lifestyle)}
+                  onClick={() => {
+                    if (lifeStyles.includes(lifestyle)) {
+                      const filteredvalue = lifeStyles.filter(
+                        (item) => item !== lifestyle
+                      );
+                      setLifeStyle(filteredvalue);
+                    } else {
+                      setLifeStyle((prev) => [...prev, lifestyle]);
+                    }
+                  }}
                   value={lifeStyles}
                 />
               ))}
@@ -127,7 +145,16 @@ const CreateBriefStepthree = () => {
                 <CustomTag
                   key={key}
                   text={interestText}
-                  onClick={() => setInterest(interestText)}
+                  onClick={() => {
+                    if (interest.includes(interestText)) {
+                      const filteredvalue = interest.filter(
+                        (item) => item !== interestText
+                      );
+                      setInterest(filteredvalue);
+                    } else {
+                      setInterest((prev) => [...prev, interestText]);
+                    }
+                  }}
                   value={interest}
                 />
               ))}

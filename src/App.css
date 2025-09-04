@@ -22,6 +22,7 @@
      --color-brandAsh-903: #848C94;
      --color-brandAsh-904: #F4F2F4;
      --color-brandAshBold: #C2BCC1;
+     --color-brandAsh-905: #FDF7FC;
      --color-brandRed: #F43F5E;
      --color-brandRed-100: #DF2D2D;
      --color-brandPdfRed: #E5252A;
@@ -225,6 +226,11 @@
    }
 
    .ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
-     border-color: black;
-     background-color: black;
+     border-color: var(--color-brandPink);
+     background-color: var(--color-brandPink);
+   }
+
+   .customcheckboxstyle .ant-checkbox-checked .ant-checkbox-inner {
+     background-color: var(--color-brandPink);
+     border-color: var(--color-brandPink);
    }
