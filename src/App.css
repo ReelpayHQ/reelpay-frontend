@@ -223,3 +223,16 @@
 .ant-modal .ant-modal-content {
 padding: 0 !important;
    }
+
+   /* .ant-radio-wrapper .ant-radio-wrapper-checked {
+color: red;
+   }
+
+   .ant-radio .ant-wave-target .ant-radio-checked{
+    color: red;
+   } */
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner{
+border-color: black;
+    background-color: black;
+   }

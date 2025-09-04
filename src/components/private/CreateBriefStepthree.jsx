@@ -1,7 +1,142 @@
-import React from "react";
+import { useState } from "react";
+import FormBlock from "../FormBlock";
+import { Checkbox, Flex, Radio, Tag } from "antd";
+import { CustomCheckbox } from "../fields/CustomCheckbox";
+import { TitleHeading } from "../TitleHeading";
+import CustomTag from "../CustomTag";
+import {
+  ageOptions,
+  appearanceOptions,
+  genderOptions,
+  interestOptions,
+  languageOptions,
+  lifeStyleOptions,
+} from "../../data/optiondropdowns";
 
 const CreateBriefStepthree = () => {
-  return <div>CreateBriefStepthree</div>;
+  const [lifeStyles, setLifeStyle] = useState("");
+  const [appearance, setAppearance] = useState("");
+  const [interest, setInterest] = useState("");
+  const [location, setLocation] = useState([]);
+  const [age, setAge] = useState([]);
+  const [language, setLanguage] = useState([]);
+  const [gender, setGender] = useState("");
+  return (
+    <div className="flex flex-col gap-4">
+      <FormBlock title={"Demography"}>
+        <div className="flex flex-col gap-7">
+          <div>
+            <Checkbox.Group
+              value={location}
+              onChange={(e) => setLocation([...e])}
+            >
+              <CustomCheckbox
+                title="Creator location"
+                value={"Nigeria"}
+                label={
+                  <span className="flex items-center gap-9">
+                    Nigeria
+                    <span className="font-light">
+                      Other countries coming soon
+                    </span>
+                  </span>
+                }
+              />
+            </Checkbox.Group>
+          </div>
+
+          <div>
+            <TitleHeading text={"Preferred gender"} />
+            <Radio.Group
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              {genderOptions.map((gender, key) => (
+                <Radio
+                  key={key}
+                  value={gender.toLowerCase()}
+                  className="!text-brandAsh"
+                >
+                  {gender}
+                </Radio>
+              ))}
+            </Radio.Group>
+          </div>
+
+          <div>
+            <TitleHeading text={"Preferred age"} />
+            <Checkbox.Group value={age} onChange={(e) => setAge([...e])}>
+              {ageOptions.map((age, key) => (
+                <CustomCheckbox key={key} label={age} value={age} />
+              ))}
+            </Checkbox.Group>
+          </div>
+
+          <div>
+            <TitleHeading text={"Language"} />
+            <Checkbox.Group
+              value={language}
+              onChange={(e) => setLanguage([...e])}
+            >
+              {languageOptions.map((language, key) => (
+                <CustomCheckbox key={key} label={language} />
+              ))}
+            </Checkbox.Group>
+          </div>
+        </div>
+      </FormBlock>
+
+      <FormBlock title={"Style & Lifestyle"}>
+        <div className="flex flex-col gap-7">
+          <div>
+            <TitleHeading text={"Appearance"} />
+            <Flex wrap="wrap" align="center" gap={"small"}>
+              {appearanceOptions.map((appearanceText, key) => (
+                <CustomTag
+                  key={key}
+                  text={appearanceText}
+                  onClick={() => setAppearance(appearanceText)}
+                  value={appearance}
+                />
+              ))}
+            </Flex>
+          </div>
+
+          <div>
+            <TitleHeading text={"Life style"} />
+            <Flex wrap="wrap" align="center" gap={"small"}>
+              {lifeStyleOptions.map((lifestyle, key) => (
+                <CustomTag
+                  key={key}
+                  text={lifestyle}
+                  onClick={() => setLifeStyle(lifestyle)}
+                  value={lifeStyles}
+                />
+              ))}
+            </Flex>
+          </div>
+        </div>
+      </FormBlock>
+
+      <FormBlock title={"Niche"}>
+        <div className="flex flex-col gap-7">
+          <div>
+            <TitleHeading text={"Interests"} />
+            <Flex wrap="wrap" align="center" gap={"small"}>
+              {interestOptions.map((interestText, key) => (
+                <CustomTag
+                  key={key}
+                  text={interestText}
+                  onClick={() => setInterest(interestText)}
+                  value={interest}
+                />
+              ))}
+            </Flex>
+          </div>
+        </div>
+      </FormBlock>
+    </div>
+  );
 };
 
 export default CreateBriefStepthree;

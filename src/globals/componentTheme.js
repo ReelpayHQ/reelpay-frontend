@@ -65,5 +65,11 @@ export const componentTheme = {
       controlItemBgHover: "",
       controlPaddingHorizontal: 0,
     },
+    // Radio:{
+    //   buttonCheckedBg:'red',
+    //   buttonSolidCheckedBg:'red',
+    //   buttonSolidCheckedColor:'red',
+    //   buttonSolidCheckedActiveBg:'red'
+    // }
   },
 };

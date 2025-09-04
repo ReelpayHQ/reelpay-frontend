@@ -110,4 +110,49 @@ const countriesOptions = countries.map((country) => {
   };
 });
 
-export { positionOptions, industryOptions, countriesOptions };
+const genderOptions = ["Male", "Female", "Both"];
+
+const ageOptions = ["18 - 24", "25 - 34", "35 - 44", "45+"];
+
+const languageOptions = ["English", "Pidgin", "Yoruba", "Igbo", "Hausa"];
+
+const appearanceOptions = [
+  "Fit & Sporty",
+  "Plus Size",
+  "Alternative style",
+  "Model/Influencer",
+  "Causal & Relatable",
+];
+
+const lifeStyleOptions = [
+  "Pet owner",
+  "Parent",
+  "Couple",
+  "Model/Influencer",
+  "Vehicle owner",
+  "Luxury homeowner",
+  "Outdoor enthusiast",
+  "Mom Influencer",
+];
+
+const interestOptions = [
+  "Cooking",
+  "Fashion & Beauty",
+  "Technology",
+  "Skits/Comedy",
+  "DIY",
+  "Health & Wellness",
+  "Outdoor activities ",
+];
+
+export {
+  positionOptions,
+  industryOptions,
+  countriesOptions,
+  genderOptions,
+  ageOptions,
+  languageOptions,
+  lifeStyleOptions,
+  appearanceOptions,
+  interestOptions,
+};
