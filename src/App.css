@@ -17,15 +17,22 @@
      --color-brandAsh-700: #7D8191;
      --color-brandAsh-800: #EFECEF;
      --color-brandAsh-900: #E7E4E6;
+     --color-brandAsh-901: #797179;
+     --color-brandAsh-902: #DBD6D9;
+     --color-brandAsh-903: #848C94;
+     --color-brandAsh-904: #F4F2F4;
      --color-brandAshBold: #C2BCC1;
+     --color-brandAsh-905: #FDF7FC;
      --color-brandRed: #F43F5E;
      --color-brandRed-100: #DF2D2D;
+     --color-brandPdfRed: #E5252A;
      --color-brandGreen: #16A34A;
      --color-brandGreen-100: #11813C;
      --color-brandOrange: #C2410C;
      --color-brandOrange-100: #FFF7EA;
      --color-brandPurple: #6D28D8;
      --color-brandPurple-100: #F5F3FF;
+     --color-brandDarkPurple: #232530;
      --text-size13: 13px;
      --text-size16: 16px;
      --text-size32: 32px;
@@ -212,4 +219,18 @@
    .radioWrapper .ant-radio-button-wrapper {
      height: auto;
      padding-inline: 0px;
+   }
+
+   .ant-modal .ant-modal-content {
+     padding: 0 !important;
+   }
+
+   .ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+     border-color: var(--color-brandPink);
+     background-color: var(--color-brandPink);
+   }
+
+   .customcheckboxstyle .ant-checkbox-checked .ant-checkbox-inner {
+     background-color: var(--color-brandPink);
+     border-color: var(--color-brandPink);
    }

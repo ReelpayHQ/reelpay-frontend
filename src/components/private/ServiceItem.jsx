@@ -38,18 +38,18 @@ const ServiceItem = ({
     <div className="p-3">
       {data.img ? <img src={data.img} className="w-7 object-fit" /> : null}
       {data.icon ? (
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col lg:flex-row items-center gap-3">
           <div
             className={`w-8 h-8 rounded-md flex items-center justify-center ${iconWrapperBg}`}
           >
             <data.icon size={20} color={iconColor} />
           </div>
           <div className="flex items-center gap-2">
-            <h1 className="font-semibold text-sm text-brandBlack">
+            <h1 className="font-semibold text-[10px] md:text-sm text-brandBlack">
               {data.title}
             </h1>
             {showdefault ? (
-              <p className="text-xs text-brandAsh">Default</p>
+              <p className="text-[10px] md:text-xs text-brandAsh">Default</p>
             ) : null}
             {price ? (
               <Badge

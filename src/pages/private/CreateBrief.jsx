@@ -70,7 +70,7 @@ const CreateBrief = () => {
           </Col>
         </Row>
       </div>
-      <div className=" px-3 md:px-40 py-10">
+      <div className=" px-3 md:px-5 lg:px-15 xl:px-40 py-10">
         <Row gutter={"40"}>
           <Col
             xs={{ span: 24 }}
@@ -81,6 +81,7 @@ const CreateBrief = () => {
             <RenderComponent />
           </Col>
           <Col
+            className="mt-4 md:mt-0"
             xs={{ span: 24 }}
             sm={{ span: 24 }}
             md={{ span: 12 }}

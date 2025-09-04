@@ -57,7 +57,7 @@ const CreateBriefStepone = () => {
 
       <FormBlock title={"Customize your order"}>
         <div className="flex flex-col gap-4 mt-3">
-          <div className="w-4/9 flex flex-col gap-4">
+          <div className="w-full lg:w-5/9 xl:4/9 flex flex-col gap-4">
             <CustomButtonRadio
               value={platform}
               onChange={(e) =>
@@ -126,7 +126,7 @@ const CreateBriefStepone = () => {
             </CustomButtonRadio>
           </div>
 
-          <div className="w-8/10">
+          <div className="w-full lg:w-8/10">
             <CustomButtonRadio
               value={editing}
               onChange={(e) =>

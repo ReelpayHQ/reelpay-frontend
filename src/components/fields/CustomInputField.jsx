@@ -1,5 +1,4 @@
 import { Input } from "antd";
-import React from "react";
 import ErrorText from "../ErrorText";
 import CustomLabel from "./CustomLabel";
 
@@ -24,7 +23,11 @@ const CustomInputField = ({
     <div>
       {label ? <CustomLabel label={label} {...labelProps} /> : null}
       <div className="mt-1">
-        <InputComponent status={error ? "error" : status} {...props} />
+        <InputComponent
+          status={error ? "error" : status}
+          autoSize={type === "textArea" ? false : ""}
+          {...props}
+        />
       </div>
       <ErrorText error={error} />
     </div>
