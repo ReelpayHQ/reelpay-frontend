@@ -215,7 +215,7 @@ const CreateBriefSteptwo = () => {
             </div>
 
             <div className="flex items-center justify-end gap-3 mt-3">
-              <Button type="default" className="!h-8.5">
+              <Button type="default" className="!h-8.5" onClick={handleOk}>
                 Cancel
               </Button>
               <Button

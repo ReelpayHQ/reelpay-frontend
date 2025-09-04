@@ -19,7 +19,7 @@ const stepItem = [
   },
 ];
 const CreateBrief = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(0);
 
   const RenderComponent = items[current];
 
