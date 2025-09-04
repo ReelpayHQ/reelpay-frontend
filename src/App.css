@@ -22,7 +22,7 @@
      --color-brandRed-100: #DF2D2D;
      --color-brandGreen: #16A34A;
      --color-brandGreen-100: #11813C;
-     --color-brandOrange:#C2410C;
+     --color-brandOrange: #C2410C;
      --color-brandOrange-100: #FFF7EA;
      --color-brandPurple: #6D28D8;
      --color-brandPurple-100: #F5F3FF;
@@ -113,16 +113,21 @@
    .stepwrapper .ant-steps .ant-steps-item-finish .ant-steps-item-icon {
      background-color: transparent;
      border-color: var(--color-brandAsh);
-    color: var(--color-brandAsh);
+     color: var(--color-brandAsh);
    }
 
    .stepwrapper .ant-steps-item .ant-steps-item-process .ant-steps-item-active {
-     background-color: red;
+     /* background-color: red; */
    }
 
    .stepwrapper .ant-steps .ant-steps-item-process .ant-steps-item-icon {
      background-color: transparent;
      border: 1px solid var(--color-brandPink);
+     width: 18px;
+     height: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
    }
 
    .stepwrapper .ant-steps .ant-steps-item-process .ant-steps-item-icon>.ant-steps-icon {
@@ -138,12 +143,28 @@
    .stepwrapper .ant-steps .ant-steps-item-wait .ant-steps-item-icon {
      background-color: transparent;
      border: 1px solid var(--color-brandAsh);
+     width: 18px;
+     height: 18px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
    }
 
    .stepwrapper .ant-steps .ant-steps-item-wait>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
      color: var(--color-brandAsh);
      font-size: 14px;
      font-weight: 400;
+   }
+
+
+
+   .stepwrapper .ant-steps.ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item {
+     padding-inline-start: 0px;
+   }
+
+   .stepwrapper .ant-steps .ant-steps-item-container {
+     display: flex;
+     align-items: center;
    }
 
    .ant-steps .ant-steps-item-process>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title::after {
@@ -154,8 +175,8 @@
      flex: none;
    }
 
-     .stepwrapper .anticon svg {
-    color:var(--color-brandAsh);
+   .stepwrapper .anticon svg {
+     color: var(--color-brandAsh);
    }
 
    .radioWrapper .ant-radio-button-wrapper {

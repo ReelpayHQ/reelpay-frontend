@@ -41,7 +41,7 @@ const CreateBrief = () => {
             xs={{ span: 24, offset: 0 }}
             sm={{ span: 24, offset: 0 }}
             md={{ span: 12, offset: 0 }}
-            lg={{ span: 9, offset: 8 }}
+            lg={{ span: 9, offset: 9 }}
           >
             <div className="stepwrapper">
               <Steps current={current} items={stepItem} />
@@ -51,9 +51,9 @@ const CreateBrief = () => {
             xs={{ span: 24, offset: 0 }}
             sm={{ span: 24, offset: 0 }}
             md={{ span: 12, offset: 0 }}
-            lg={{ span: 4, offset: 3 }}
+            lg={{ span: 4, offset: 2 }}
           >
-            <div className="flex gap-5 justify-self-end place-self-end">
+            <div className="flex gap-2 justify-self-end place-self-end">
               <Button type="default" className="!h-8.5">
                 Save & exit
               </Button>
@@ -150,8 +150,8 @@ const CreateBrief = () => {
                   </div>
                   <div className="bg-brandOrange-100 rounded-lg px-3.5 py-3">
                     <Flex align="" gap={6}>
-                      <PiInfoFill size={30} color="var(--color-brandPink)" />
-                      <p className="text-sm font-semibold leading-4 text-brandOrange max-w-58">
+                      <PiInfoFill size={24} color="var(--color-brandPink)" />
+                      <p className="text-xs font-medium leading-4 text-brandOrange max-w-50">
                         Funds will be auto deducted from your wallet after
                         approving a creator.
                       </p>

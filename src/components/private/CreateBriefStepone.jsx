@@ -33,7 +33,7 @@ const CreateBriefStepone = () => {
           }
           label={"What type of service do you want?"}
         >
-          {serviceOptions?.map((option) => {
+          {serviceOptions?.map((option, index) => {
             const isSelected = option.value === service;
             return (
               <Radio value={option.value}>
@@ -41,10 +41,10 @@ const CreateBriefStepone = () => {
                   data={option}
                   value={service}
                   iconWrapperBg={
-                    isSelected ? "bg-brandPink-100" : "bg-brandPurple-100"
+                    index === 0 ? "bg-brandPink-100" : "bg-brandPurple-100"
                   }
                   iconColor={
-                    isSelected
+                    index === 0
                       ? "var(--color-brandPink)"
                       : "var(--color-brandPurple)"
                   }
@@ -142,10 +142,10 @@ const CreateBriefStepone = () => {
                       data={option}
                       value={"basic"}
                       iconWrapperBg={
-                        isSelected ? "bg-brandPink-100" : "bg-brandPurple-100"
+                        index == 0 ? "bg-brandPink-100" : "bg-brandPurple-100"
                       }
                       iconColor={
-                        isSelected
+                        index == 0
                           ? "var(--color-brandPink)"
                           : "var(--color-brandPurple)"
                       }

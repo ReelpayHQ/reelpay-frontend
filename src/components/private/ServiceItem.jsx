@@ -40,9 +40,9 @@ const ServiceItem = ({
       {data.icon ? (
         <div className="flex items-center gap-3">
           <div
-            className={`w-9 h-9 rounded-md flex items-center justify-center ${iconWrapperBg}`}
+            className={`w-8 h-8 rounded-md flex items-center justify-center ${iconWrapperBg}`}
           >
-            <data.icon size={25} color={iconColor} />
+            <data.icon size={20} color={iconColor} />
           </div>
           <div className="flex items-center gap-2">
             <h1 className="font-semibold text-sm text-brandBlack">
